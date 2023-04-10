@@ -1,0 +1,1667 @@
+/**Font**/
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url(//db.onlinewebfonts.com/c/50cd2aad9c8f35800bb6beac3ad42f16?family=Azonix);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.Nav {
+  max-width: 1570px;
+  padding: 0 40px;
+  margin: auto;
+}
+
+.NavBar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 40px 0;
+  font-family: 'Azonix';
+  transition: all 0.3s ease;
+}
+
+.NavBar.Container{
+  padding: 15px 0;
+  background: #131313;
+}
+
+.NavBar .Nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.NavBar .IconLogo {
+  display: inline-block;
+  height: 90px; 
+  width: 200px; 
+ }
+
+.NavBar .Logo a {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.NavBar .Navbar_Items li { 
+  display: inline-block;
+}
+
+.NavBar .Navbar_Items li a {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 60px;
+  transition: color 0.3s ease;
+}
+
+.NavBar .Navbar_Items li a:hover {
+  color: rgb(134, 0, 27);
+}
+
+.NavBar.Container .Navbar_Items li a:hover{
+  color: blue;
+}
+
+.button {
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+
+/**Homepage**/
+.Homepage {
+  display: flex;
+  height: 100vh;
+  color: #fff;
+  min-height: 300px;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+}
+
+.Homepage .Nav {
+  margin: auto auto;
+}
+
+.Homepage .Nav .introText1 {
+  font-family: 'Azonix';
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.Homepage .Nav .introText2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.Homepage .Nav .introText3 {
+  font-family: 'Azonix';
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.Homepage .Nav .introText4 {
+  font-family: 'Azonix';
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: crimson;
+}
+
+.Homepage .Nav .introText4 big{
+  color: white;
+}
+
+.Homepage .Nav .introText5 {
+  font-family: 'Azonix';
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.Homepage .Nav .introText5 span {
+  color: crimson;
+  font-weight: 500;
+}
+
+.BackgroundVideo {
+  filter: brightness(70%);
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:0;
+  z-index: -1;
+}
+
+ .Homebutton{
+  margin-left: 33%;
+  display: flex;
+  align-items: center;
+  }
+ .Homebutton button{
+  color: #fff;
+  display: block;
+  width: 200px;
+  height: 70px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background-color: crimson;
+  border: 2px solid rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  font-family: 'Azonix';
+  }
+  
+ .Homebutton button:hover{
+  color: rgb(0, 0, 0);
+  background: none;
+  }
+
+/**About**/
+.AboutPage {
+ background-color: crimson;
+ height: 100%;
+ margin: auto;
+ width: 100%;
+ padding: 20px 0;
+}
+
+.AboutPage .about{
+margin: 6% 0px;
+text-align: center;
+}
+
+.AboutPage .about .Title h2 {
+  font-family: 'Azonix';
+  font-size: 49px;
+  color: aliceblue;
+}
+
+.AboutPage .about .Background {
+  background-color: #fff;
+  margin: 0 5%;
+  border-radius: 40px;
+}
+
+.AboutPage .about .TitleUnder {
+  border: 7px solid crimson;
+  font-family: 'Azonix';
+  padding-top: 7px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.AboutPage .about .TitleUnder span {
+  font-family: 'Azonix';
+  font-size: 30px;
+  color: crimson;
+}
+
+.AboutPage .about .Portrait {
+  margin: 13px;
+  height: 700px;
+  width: auto;
+  background-color: rgb(0, 0, 0);
+  border: 10px solid crimson;
+}
+
+.AboutPage .about .Name {
+  font-family: 'Ubuntu', sans-serif;
+  color: #131313;
+  font-size: 45px;
+  margin: 0 80px;
+}
+
+.AboutPage .about .ParagMe {
+  text-indent: 100px;
+  margin: 90px 170px;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 40px;
+  text-align: justify;
+}
+
+.AboutPage .about .Skills h2 {
+  font-family: 'Azonix';
+  font-size: 49px;
+  color: aliceblue;
+}
+
+.AboutPage .about .Background2 {
+  background-color: #fff;
+  margin: 0 10%;
+  border-radius: 40px;
+}
+
+.AboutPage .about .SkillsUnder {
+  border: 7px solid crimson;
+  font-family: 'Azonix';
+  padding-top: 10px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.AboutPage .about .SkillsUnder span {
+  font-family: 'Azonix';
+  font-size: 30px;
+  color: crimson;
+}
+
+.AboutPage .about .Myskills {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  padding: 20px 20%;
+}
+
+.AboutPage .about .ApplicationsUnder {
+  border: 7px solid crimson;
+  font-family: 'Azonix';
+  padding-top: 7px;
+  font-size: 20px;
+  list-style: none;
+}
+
+.AboutPage .about .ApplicationsUnder span {
+  font-family: 'Azonix';
+  font-size: 30px;
+  color: crimson;
+}
+
+.btn ul{
+  list-style: none;
+  margin: 9px;
+  font-family: 'Azonix';
+}
+
+.btn ul a{ 
+  position: relative;
+  color: #f5f5f5;
+  height: 70px;
+  width: 220px;
+  display: block;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block; 
+  background-image: linear-gradient(115deg,#eb2727,#ff7c24,#f73636,#ffa256,#fa8322);
+}
+
+.btn a:hover{
+  animation: rotate 0.9s linear infinite;
+  color: #ff0a0a;
+}
+
+@keyframes rotate {
+  100%{
+    filter: hue-rotate(-360deg)
+  }
+}
+.btn a span{
+  height: 88%;
+  width: 96%;
+  background: #111;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 6px;
+  line-height: 62px;
+  font-size: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.AboutPage .about .Experience h2 {
+  font-family: 'Azonix';
+  font-size: 49px;
+  color: aliceblue;
+  padding: 60px 0 0 0;
+}
+
+.AboutPage .about .Background3 {
+  background-color: #fff;
+  margin: 0 10%;
+  border-radius: 40px;
+}
+
+.AboutPage .about .ExperienceUnder {
+  border: 7px solid crimson;
+  font-family: 'Azonix';
+  padding-top: 10px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.AboutPage .about .ExperienceUnder span {
+  font-family: 'Azonix';
+  font-size: 30px;
+  color: crimson;
+}
+
+.AboutPage .about .MyExperience {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  padding: 20px 20%;
+  display: inline-block;
+}
+
+.AboutPage .about .Education h2 {
+  font-family: 'Azonix';
+  font-size: 49px;
+  color: aliceblue;
+  padding: 60px 0 0 0;
+}
+
+.AboutPage .about .Background4 {
+  background-color: #fff;
+  margin: 0 16%;
+  border-radius: 60px;
+}
+
+.AboutPage .about .EducationUnder {
+  border: 7px solid crimson;
+  font-family: 'Azonix';
+  padding-top: 10px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.AboutPage .about .EducationUnder span {
+  font-family: 'Azonix';
+  font-size: 30px;
+  color: crimson;
+}
+
+.AboutPage .about .MyEducation {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  padding: 20px 20%;
+}
+
+/**Services**/
+.serve {
+background-color: crimson;
+}
+
+.Titleserve{
+  font-size: 49px;
+  font-family: 'Azonix';
+  text-align: center;
+  padding: 120px 0 0 0;
+  color: #f2f2f2;
+}
+
+.Offers{
+  color: #f2f2f2;
+  margin: 40px 0;
+ text-align: center;
+ font-family: 'Ubuntu';
+ font-size: 20px;
+}
+
+.service .wrapper .box{
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  padding: 10 0;
+  background: #f2f2f2;
+  border-radius: 20px;
+}
+.service .wrapper{
+  display: grid;
+  margin: auto 90px auto;
+  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+ }
+
+.service .wrapper .box {
+  font-family: 'Azonix';
+  width: 350px;
+  margin: 0 auto;
+  position: relative;
+  perspective: 1000px;
+  height: 220px;
+  padding-top: 50px;
+  text-align: center;
+ }
+.service.wrapper .box .front-face {
+  background: #fff;
+  height: 35%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  transition: all 0.5s ease;
+}
+.box .front-face .icon {
+  height: 80px;
+}
+.box .front-face .icon i {
+  font-size: 65px;
+}
+.box .front-face span,
+.box .back-face span {
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .front-face .icon i,
+.box .front-face span {
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
+.box .back-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 220px;
+  width: 100%;
+  padding: 30px;
+  color: #fff;
+  opacity: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  transform: translateY(110px) rotateX(-90deg);
+  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  transition: all 0.5s ease;
+  border-radius: 20px;
+ }
+
+.box .back-face p {
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Ubuntu';
+}
+
+.box:hover .back-face {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.box:hover .front-face {
+  opacity: 0;
+  transform: translateY(-110px) rotateX(90deg);
+}
+
+.serve .sheesh{
+margin: 0 10px;
+width: 98.9%;
+object-fit:fill;
+}
+
+/**Portfolio**/
+.Portfolio{
+  padding: 100px 10px;
+  background-color: crimson;
+  height: 100%;
+}
+
+.Gallery {
+    font-size: 49px;
+    font-family: 'Azonix';
+    text-align: center;
+    padding: 120px 0 0 0;
+    color: #f2f2f2; 
+}
+
+.linetag{
+  margin: 20px 0 0 0;
+  font-size: 20px;
+  font-family: 'Ubuntu';
+
+}
+
+::selection{
+  color: #fff;
+  background: #007bff;
+}
+
+.boxes{
+  margin: 30px auto;
+  max-width: 4700px;
+}
+
+.boxes nav{
+  display: flex;
+  justify-content: center;
+}
+
+.boxes .items{
+  display: flex;
+  max-width: 720px;
+  width: 100%;
+  justify-content: center;
+}
+
+.items span{
+  padding: 7px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #ffffff;
+  border-radius: 50px;
+  border: 2px solid #030303;
+  transition: all 0.3s ease;
+  margin: 0 4px;
+}
+
+.items span.active,
+.items span:hover{
+  color: #fff;
+  background: #ffbb55;
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.gallery .image {
+  width: calc(100% / 4);
+  padding: 7px;
+}
+
+.gallery .image span {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery .image video {
+  width: 100%;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+.gallery .image:hover video {
+  transform: scale(1.1);
+}
+
+.gallery .image img {
+  width: 100%;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.gallery .image:hover img {
+  transform: scale(1.1);
+}
+
+.gallery .image.hide {
+  display: none;
+}
+
+.gallery .image.show {
+  animation: animate 0.4s ease;
+}
+
+@keyframes animate {
+  0%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.preview-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #fff;
+  max-width: 1000px;
+  width: 100%;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+
+.preview-box.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+
+.preview-box .details {
+  padding: 13px 15px 13px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.details .title {
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.details .title p {
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.details .icon {
+  color: #007bff;
+  font-style: 22px;
+  cursor: pointer;
+}
+
+.preview-box .image-box {
+  width: 100%;
+  display: flex;
+}
+
+.image-box video {
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+}
+
+.shadow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  background: rgba(0,0,0,0.4);
+}
+.shadow.show {
+  display: block;
+}
+
+.image h2 {
+  font-size: 32px;
+  text-align: center;
+  font-family: 'Azonix';
+  color: #f2f2f2;
+}
+
+/**Contacts**/
+.Contacts{
+  width: 100%;
+  padding: 170px 70px;
+  height: 100%;
+  background: crimson;
+}
+
+.titles{
+  position: relative;
+  text-align: center;
+  font-size: 49px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: 'Azonix', sans-serif;
+  color: #f2f2f2;
+}
+.titles::before{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 400px;
+  height: 3px;
+  background: rgb(255, 255, 255);
+  transform: translateX(-50%);
+}
+.titles::after{
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  padding: 0 20px;
+  background: crimson;
+  transform: translateX(-50%);
+  content: "get in touch";
+}
+
+.left p{
+  color: #f2f2f2;
+  font-size: 20px;
+  margin-top: 15px;
+  font-family: 'Ubuntu';
+  text-align: justify;
+}
+
+.left .text {
+  color: #ffffff;
+  font-size: 30px;
+  font-family: 'Ubuntu';
+  text-align: center;
+}
+
+.Column{
+  width: calc(50% - 3px);
+  margin: 0 25%;
+}
+
+.left .row{
+  background: linear-gradient(-170deg, #c850c0, #4158d0);
+  padding: 0 20px;
+  border-radius: 20px;
+}
+
+.icons{
+  margin: 10px 0;
+}
+
+.row{
+  display: flex;
+  height: 80px;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.info{
+  margin-left: 30px;
+  color: rgb(2, 0, 87);
+}
+
+.info .head{
+  font-size: 35px;
+  text-align: left;
+  font-family: 'Ubuntu';
+  font-weight: 700;
+}
+
+.info .sub-title{
+  color: white;
+  font-size: 30px;
+  text-align: left;
+  font-family: 'Ubuntu';
+  font-weight: 800;
+}
+
+.row i{
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+}
+
+.right .text {
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: 800;
+  font-family: 'Ubuntu';
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.right form .fields{
+  display: flex;
+}
+
+.right form .field,
+.right form .fields .field{
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.right form .textarea{
+  height: 80px;
+  width: 100%;
+}
+
+.right form .name{
+  margin-right: 10px;
+}
+
+.right form .field input,
+.right form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.right form .field input:focus,
+.right form .textarea textarea:focus{
+  border-color: #b3b3b3;
+}
+.right form .textarea textarea{
+padding-top: 10px;
+resize: none;
+}
+.right form .button-area{
+display: flex;
+align-items: center;
+}
+.right form .button-area button{
+color: #fff;
+display: block;
+width: 160px;
+height: 45px;
+outline: none;
+font-size: 18px;
+font-weight: 500;
+border-radius: 6px;
+cursor: pointer;
+flex-wrap: nowrap;
+background: linear-gradient(-135deg, #c850c0, #4158d0);
+box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+border: 2px solid rgb(255, 255, 255);
+transition: all 0.3s ease;
+}
+
+.right form .button-area button:hover{
+color: rgb(0, 0, 0);
+background: none;
+}
+
+
+@media (max-width: 1283px) {
+  .AboutPage {
+    padding: 50px 0;
+  }
+  
+  
+/**Contact**/
+
+
+.Column{
+  width: calc(60% - 3px);
+  margin: 0 20%;
+}
+
+.left .text {
+  font-size: 30px;
+}
+
+.info .head{
+  font-size: 25px;
+}
+
+.info .sub-title{
+  font-size: 30px;
+}
+.gallery .image{
+  width: calc(100% / 3);
+}
+
+@media (max-width: 1028px) {
+  .Column{
+    width: calc(70% - 3px);
+    margin: 0 15%;
+   }
+
+  }
+  .boxes nav .items{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav .items span{
+    margin: 5px;
+  }
+  .gallery .image{
+    width: 100%;
+  }  
+  .gallery .image{
+    width: calc(100% / 3);
+  }
+
+@media (max-width: 1000px) {
+  .button {
+    display: block;
+    z-index: 999;
+  }
+
+  .button i.active:before {
+    content: "\f00d";
+  }
+
+  .NavBar .Navbar_Items {
+   position: fixed;
+   height: 100vh;
+   width: 100%;
+   left: 0;
+   top: -100%;
+   background: #131313;
+   text-align: center;
+   padding-top: 150px;
+   transition: all 0.3s ease;
+  }
+
+  .NavBar .Navbar_Items.active {
+    top: 0;
+  }
+
+  .NavBar .Navbar_Items li{
+   display: block;
+  }
+
+  .NavBar .Navbar_Items li a{
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+   }
+
+   .boxes {
+    width: 100%;
+    }
+    .single-service {
+    width: 95%;
+    margin-bottom: 30px;
+    }
+    .boxes h2 {
+    font-size: 30px;
+    }
+    
+    .gallery .image{
+      width: calc(100% / 3);
+    }
+
+}
+}
+
+footer{
+  background: #111;
+  padding: 20px 23px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Azonix';
+}
+footer span a{
+  color: crimson;
+  text-decoration: none;
+}
+footer span a:hover{
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  .Nav {
+    padding: 0 50px;
+  }
+
+}
+
+@media (max-width: 947px) {
+  
+ 
+  /**Homepage**/
+  .Homepage .Nav .introText1 {
+    font-size: 27px;
+  }
+  
+  .Homepage .Nav .introText2 {
+    font-size: 70px;
+  }
+  
+  .Homepage .Nav .introText3 {
+    font-size: 20px;
+  }
+
+  .Homepage .Nav .introText4 {
+    font-size: 35px;
+  }
+
+  .Homepage .Nav .introText5 {
+    font-size: 25px;
+  }
+
+  /**About**/
+  .AboutPage {
+    padding: 60px 0;
+    width: 100%
+  }
+
+  .AboutPage .about .Title h2 {
+    font-size: 40px;
+}
+
+.AboutPage .about .TitleUnder {
+  font-size: 30px;
+}
+
+.AboutPage .about .TitleUnder span {
+  font-size: 35px;
+}
+
+.AboutPage .about .Portrait {
+  height:600px;
+  width: 90%;
+}
+
+.AboutPage .about .Name {
+  font-size: 45px;
+}
+
+.AboutPage .about .ParagMe {
+  text-indent: 50px;
+  margin: 30px 40px;
+  font-size: 35px;
+}
+
+.AboutPage .about .Skills h2 {
+  font-size: 45px;
+}
+
+.AboutPage .about .SkillsUnder {
+  font-size: 30px;
+}
+
+.AboutPage .about .SkillsUnder span {
+  font-size: 35px;
+}
+
+.AboutPage .about .Myskills {
+  font-size: 35px;
+}
+
+.AboutPage .about .ApplicationsUnder {
+  font-size: 30px;
+}
+
+.AboutPage .about .ApplicationsUnder span {
+  font-size: 35px;
+}
+
+.btn ul a{ 
+  height: 90px;
+  width: 180px;
+}
+
+.AboutPage .about .Experience h2 {
+  font-size: 45px;
+}
+
+.AboutPage .about .ExperienceUnder {
+  font-size: 30px;
+}
+
+.AboutPage .about .ExperienceUnder span {
+  font-size: 35px;
+}
+
+.AboutPage .about .MyExperience {
+  font-size: 35px;
+}
+
+.AboutPage .about .Education h2 {
+  font-size: 45px;
+}
+
+.AboutPage .about .EducationUnder {
+  font-size: 30px;
+
+}
+
+.AboutPage .about .EducationUnder span {
+  font-size: 30px;
+}
+
+.AboutPage .about .MyEducation {
+  font-size: 35px;
+}
+
+/**Contact**/
+.titles{
+  font-size: 45px;
+}
+
+.titles::before{
+  width: 230px;
+}
+
+.titles::after{
+  bottom: -8px;
+  left: 50%;
+  font-size: 15px;
+  padding: 0 10px;
+}
+
+.left p{
+  font-size: 17px;
+  margin: 15px -5px;
+}
+
+.Column{
+  width: calc(90% - 3px);
+  margin: 0 5%;
+}
+
+.left .text {
+  font-size: 30px;
+}
+
+.info .head{
+  font-size: 25px;
+}
+
+.info .sub-title{
+  font-size: 25px;
+}
+
+.row i{
+  font-size: 25px;
+}
+
+.right .text {
+  font-size: 30px;
+  
+}
+
+
+}
+
+@media (max-width: 800px) {
+  .gallery .image{
+    width: calc(100% / 2);
+  }
+
+
+@media (max-width: 700px) {
+  .wrapper{
+    margin: 200px auto;
+  }
+
+  .boxes nav .items{
+    max-width: 600px;
+  }
+  nav .items span{
+    padding: 7px 15px;
+  }
+ }
+   
+}
+
+  @media (max-width: 690px) {
+
+    .NavBar .IconLogo {
+      height: 82px; 
+      width: 150px; 
+     }
+    
+    .NavBar .Logo a {
+      font-size: 30px;
+    }
+  
+    .Nav {
+      padding: 0 20 px;
+    }
+
+    /**Homepage**/
+    .Homepage .Nav .introText1 {
+      font-size: 20px;
+    }
+    
+    .Homepage .Nav .introText2 {
+      font-size: 50px;
+    }
+    
+    .Homepage .Nav .introText3 {
+      font-size: 20px;
+    }
+
+    .Homepage .Nav .introText4 {
+      font-size: 33px;
+    }
+
+    .Homepage .Nav .introText5 {
+      font-size: 30px;
+    }
+
+    .Homebutton{
+      margin-left: 27%;
+    }
+
+    .Homebutton button{
+      width: 190px;
+      height: 60px;
+      font-size: 18px;
+    }
+
+
+    /**About**/
+    .AboutPage {
+      padding: 70px 0;
+      width: 100%
+    }
+
+    .AboutPage .about .Title h2 {
+      font-size: 35px;
+    }
+
+    .AboutPage .about .TitleUnder {
+    font-size: 20px;
+    }
+  
+    .AboutPage .about .TitleUnder span {
+    font-size: 25px;
+    }
+
+    .AboutPage .about .Portrait {
+    height:400px;
+    width: 90%;
+    }
+
+    .AboutPage .about .Name {
+    font-size: 35px;
+    }
+
+    .AboutPage .about .ParagMe {
+    text-indent: 50px;
+    margin: 30px 40px;
+    font-size: 25px;
+    }
+
+    .AboutPage .about .Skills h2 {
+    font-size: 35px;
+    }
+
+    .AboutPage .about .SkillsUnder {
+    font-size: 20px;
+    }
+
+    .AboutPage .about .SkillsUnder span {
+    font-size: 25px;
+    }
+
+    .AboutPage .about .Myskills {
+    font-size: 25px;
+    }
+
+    .AboutPage .about .ApplicationsUnder {
+    font-size: 20px;
+    }
+
+    .AboutPage .about .ApplicationsUnder span {
+    font-size: 25px;
+    }
+
+    .btn ul a{ 
+    height: 80px;
+    width: 175px;
+    }
+  
+    .AboutPage .about .Experience h2 {
+    font-size: 35px;
+    }
+
+    .AboutPage .about .ExperienceUnder {
+    font-size: 20px;
+    }
+
+    .AboutPage .about .ExperienceUnder span {
+    font-size: 25px;
+    }
+
+    .AboutPage .about .MyExperience {
+    font-size: 25px;
+    }
+
+    .AboutPage .about .Education h2 {
+    font-size: 35px;
+    }
+
+    .AboutPage .about .EducationUnder {
+    font-size: 20px;
+    }
+  
+    .AboutPage .about .EducationUnder span {
+    font-size: 20px;
+    }
+  
+    .AboutPage .about .MyEducation {
+    font-size: 25px;
+    }
+
+      /**Portfolio**/
+  .Gallery {
+    font-size: 37px; /*max 49*/
+}
+
+.items span{
+  font-size: 14px; /*max 18*/
+  padding: 7px 25px;
+  margin: 0 4px;
+
+}
+
+.image h2 {
+  font-size: 27px; /*max 18*/
+}
+
+    /**Contact**/
+    .titles{
+      font-size: 35px;
+    }
+  
+    .titles::before{
+      width: 230px;
+    }
+    
+    .titles::after{
+      bottom: -8px;
+      left: 50%;
+      font-size: 15px;
+      padding: 0 10px;
+    }
+  
+    .left p{
+      font-size: 17px;
+      margin: 15px -5px;
+    }
+  
+    .Column{
+      width: calc(90% - 3px);
+      margin: 0 5%;
+    }
+    
+    .left .text {
+      font-size: 30px;
+    }
+    
+    .info .head{
+      font-size: 25px;
+    }
+    
+    .info .sub-title{
+      font-size: 25px;
+    }
+    
+    .row i{
+      font-size: 25px;
+    }
+    
+    .right .text {
+      font-size: 30px;
+    }
+  
+}
+
+@media (max-width: 1700px) {
+  .boxes nav .items{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 946px) {
+  .boxes nav .items{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav .items span{
+    margin: 5px;
+  }
+  .gallery .image{
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .boxes nav .items{
+    justify-content: center;
+  }
+  nav .items span{
+    margin: 5px;
+  }
+  .gallery .image{
+    width: 100%;
+  }
+}
+
+@media (max-width: 543px) {
+.Column{
+  width: calc(95% - 3px);
+  margin: 0 15%;
+ }
+
+ .info .sub-title{
+  font-size: 24px;
+}
+
+}
+
+  @media (max-width: 500px) {
+    .NavBar .IconLogo {
+      height: 70px; 
+      width: 120px; 
+     }
+
+    .NavBar .Logo a {
+      font-size: 30px;
+    }
+
+    /**HomePage**/
+    .Homepage .Nav .introText1 {
+      font-size: 15px;
+    }
+    
+    .Homepage .Nav .introText2 {
+      font-size: 30px;
+    }
+    
+    .Homepage .Nav .introText3 {
+      font-size: 15px;
+    }
+
+    .Homepage .Nav .introText4 {
+      font-size: 30px;
+    }
+    
+    .Homepage .Nav .introText5 {
+      font-size: 20px;
+    }
+
+    .Homebutton{
+      margin-left: 12%;
+    }
+
+    .Homebutton button{
+      width: 180px;
+      height: 50px;
+      font-size: 15px;
+    }
+
+   
+    /**About**/
+    .AboutPage {
+      padding: 80px 0;
+      width: 100%
+    }
+
+    .AboutPage .about .Title h2 {
+      font-size: 30px;
+    }
+
+    .AboutPage .about .TitleUnder {
+    font-size: 15px;
+    }
+  
+    .AboutPage .about .TitleUnder span {
+    font-size: 20px;
+    }
+
+    .AboutPage .about .Portrait {
+    height:400px;
+    width: 90%;
+    }
+
+    .AboutPage .about .Name {
+    font-size: 30px;
+    }
+
+    .AboutPage .about .ParagMe {
+    text-indent: 50px;
+    margin: 30px 40px;
+    font-size: 20px;
+    }
+
+    .AboutPage .about .Skills h2 {
+    font-size: 30px;
+    }
+
+    .AboutPage .about .SkillsUnder {
+    font-size: 15px;
+    }
+
+    .AboutPage .about .SkillsUnder span {
+    font-size: 20px;
+    }
+
+    .AboutPage .about .Myskills {
+    font-size: 20px;
+    }
+
+    .AboutPage .about .ApplicationsUnder {
+    font-size: 15px;
+    }
+
+    .AboutPage .about .ApplicationsUnder span {
+    font-size: 20px;
+    }
+
+    .btn ul a{ 
+    height: 70px;
+    width: 170px;
+    }
+  
+    .AboutPage .about .Experience h2 {
+    font-size: 30px;
+    }
+
+    .AboutPage .about .ExperienceUnder {
+    font-size: 15px;
+    }
+
+    .AboutPage .about .ExperienceUnder span {
+    font-size: 20px;
+    }
+
+    .AboutPage .about .MyExperience {
+    font-size: 20px;
+    }
+
+    .AboutPage .about .Education h2 {
+    font-size: 30px;
+    }
+
+    .AboutPage .about .EducationUnder {
+    font-size: 15px;
+  
+    }
+  
+    .AboutPage .about .EducationUnder span {
+    font-size: 20px;
+    }
+  
+    .AboutPage .about .MyEducation {
+    font-size: 20px;
+    }
+
+  /**Services**/
+  .Titleserve{
+    font-size: 49px;
+    text-align: center;
+  }
+  
+  .Offers{
+    color: #f2f2f2;
+    margin: 40px 0;
+   text-align: center;
+   font-family: 'Ubuntu';
+   font-size: 15px;
+  }
+  
+
+
+  /**Portfolio**/
+  .Gallery {
+    font-size: 30px;
+}
+
+.items span{
+  font-size: 10px;
+}
+
+.image h2 {
+  font-size: 22px;
+}
+
+  /**Contact**/
+  .titles{
+    font-size: 30px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+  }
+
+  .titles::before{
+    bottom: 0px;
+    left: 50%;
+    width: 210px;
+  }
+  
+  .titles::after{
+    bottom: -8px;
+    left: 50%;
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .left p{
+    font-size: 17px;
+    margin: 15px -25px;
+  }
+
+  .Column{
+    width: calc(90% - 3px);
+    margin: 0 2%;
+  }
+  
+  .left .text {
+    font-size: 20px;
+  }
+  
+  .info .head{
+    font-size: 20px;
+  }
+  
+  .info .sub-title{
+    font-size: 18px;
+  }
+  
+  .row i{
+    font-size: 20px;
+  }
+  
+  .right .text {
+    font-size: 20px;
+  }
+
+}
