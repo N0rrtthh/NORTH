@@ -306,7 +306,7 @@
 }
 
 .NavBar.Container{
-  padding: 15px 0;
+  padding: 5px 0;
   background: #131313;
 }
 
@@ -1229,7 +1229,7 @@ background: none;
    height: 100vh;
    width: 100%;
    left: 0;
-   top: -120%;
+   top: -100%;
    background: #131313;
    text-align: center;
    padding-top: 150px;
