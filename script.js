@@ -137,6 +137,28 @@ if (filterItem && filterImgs.length) {
   closeIcon.addEventListener('click', closePreview);
   shadow.addEventListener('click', closePreview);
 
+  // Stop audio when tab is hidden or page is closed/navigated away
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      previewVid.pause();
+    }
+  });
+
+  window.addEventListener('pagehide', () => {
+    previewVid.pause();
+    previewVid.src = '';
+  });
+
+  window.addEventListener('beforeunload', () => {
+    previewVid.pause();
+    previewVid.src = '';
+  });
+
+  // Also close preview on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && previewBox.classList.contains('show')) closePreview();
+  });
+
   // Lazy-load gallery videos — load src when in view, play all, never pause
   if ('IntersectionObserver' in window) {
     const vidObserver = new IntersectionObserver((entries) => {
