@@ -1161,8 +1161,20 @@ a.sub-title:hover {
   font-weight: 500;
 }
 
-#form-status.success { color: #4caf50; }
-#form-status.error   { color: crimson; }
+#form-status.success { color: #4caf50; animation: statusPop 0.4s ease; }
+#form-status.error   { color: crimson;  animation: statusPop 0.4s ease; }
+
+@keyframes statusPop {
+  0%   { transform: scale(0.8); opacity: 0; }
+  60%  { transform: scale(1.1); }
+  100% { transform: scale(1);   opacity: 1; }
+}
+
+@keyframes checkBounce {
+  0%   { transform: scale(0) rotate(-20deg); }
+  60%  { transform: scale(1.3) rotate(5deg); }
+  100% { transform: scale(1)   rotate(0deg); }
+}
 
 .right form .button-area button {
   color: #fff;

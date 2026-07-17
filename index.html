@@ -8,12 +8,19 @@
   <link rel="icon" href="Images/Logo1.ico" type="image/x-icon">
   <link rel="stylesheet" href="main.css">
   <style>
-    html, body { overflow: hidden; height: 100%; }
+    html, body {
+      overflow: hidden;
+      height: 100%;
+      height: 100dvh;
+    }
 
     /* ===== LOADER ===== */
     #loader {
       position: fixed;
       inset: 0;
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
       z-index: 9999;
       background: #0a0a0a;
       display: flex;
@@ -227,7 +234,7 @@
         <circle cx="50" cy="50" r="46"/>
       </svg>
       <div class="loader-logo">
-        <img src="Images/Logo 1.png" alt="NORTH">
+        <img src="Images/Logo1.png" alt="NORTH">
       </div>
     </div>
 

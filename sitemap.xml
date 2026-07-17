@@ -1,42 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>http://elroniquinones.tech/</loc>
-  <lastmod>2025-10-18T02:56:23+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>http://elroniquinones.tech/About.html</loc>
-  <lastmod>2025-10-18T02:56:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://elroniquinones.tech/Services.html</loc>
-  <lastmod>2025-10-18T02:56:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://elroniquinones.tech/Portfolio.html</loc>
-  <lastmod>2025-10-18T02:56:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://elroniquinones.tech/Contact.html</loc>
-  <lastmod>2025-10-18T02:56:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://elroniquinones.tech/index.html</loc>
-  <lastmod>2025-10-18T02:56:23+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://elroniquinones.tech/</loc><priority>1.00</priority></url>
+  <url><loc>https://elroniquinones.tech/About.html</loc><priority>0.80</priority></url>
+  <url><loc>https://elroniquinones.tech/Services.html</loc><priority>0.80</priority></url>
+  <url><loc>https://elroniquinones.tech/Portfolio.html</loc><priority>0.80</priority></url>
+  <url><loc>https://elroniquinones.tech/Contact.html</loc><priority>0.80</priority></url>
 </urlset>

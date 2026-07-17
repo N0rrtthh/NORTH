@@ -1,20 +1,15 @@
 // ===== EMAILJS SETUP =====
-// 1. Go to https://www.emailjs.com/ and create a free account
-// 2. Add an Email Service (Gmail recommended) → copy the Service ID
-// 3. Create an Email Template with these variables:
-//      {{from_name}}  — sender's name
-//      {{reply_to}}   — sender's email
-//      {{subject}}    — subject line
-//      {{message}}    — message body
-//    Set "To Email" in the template to: skylnker236@gmail.com
-// 4. Go to Account → API Keys → copy your Public Key
-// 5. Replace the three placeholder values below:
-const EMAILJS_PUBLIC_KEY  = 'ZMsl2hCvPzD1mH5fU';   // e.g. 'abc123XYZ'
-const EMAILJS_SERVICE_ID  = 'service_j1dsnkq';   // e.g. 'service_xxxxxx'
-const EMAILJS_TEMPLATE_ID = 'template_njau0b9';  // e.g. 'template_xxxxxx'
+const EMAILJS_PUBLIC_KEY  = 'ZMsl2hCvPzD1mH5fU';
+const EMAILJS_SERVICE_ID  = 'service_j1dsnkq';
+const EMAILJS_TEMPLATE_ID = 'template_l34raxk';
 
-if (typeof emailjs !== 'undefined') {
-  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+// Init EmailJS only when the SDK is available (Contact page)
+function initEmailJS() {
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    return true;
+  }
+  return false;
 }
 
 // ===== TYPEWRITER =====
@@ -185,9 +180,49 @@ if (contactForm) {
   const sendBtn    = document.getElementById('send-btn');
   const formStatus = document.getElementById('form-status');
 
+  // Real-time field validation styling
+  contactForm.querySelectorAll('input, textarea').forEach(field => {
+    field.addEventListener('blur', () => {
+      if (field.value.trim() === '') {
+        field.style.borderColor = 'crimson';
+      } else {
+        field.style.borderColor = '';
+      }
+    });
+    field.addEventListener('input', () => {
+      if (field.value.trim() !== '') field.style.borderColor = '';
+    });
+  });
+
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (typeof emailjs === 'undefined') {
+
+    // Validate all fields
+    let valid = true;
+    contactForm.querySelectorAll('input, textarea').forEach(field => {
+      if (field.value.trim() === '') {
+        field.style.borderColor = 'crimson';
+        field.style.boxShadow = '0 0 0 2px rgba(220,20,60,0.2)';
+        valid = false;
+      }
+    });
+    if (!valid) {
+      formStatus.textContent = '\u26a0 Please fill in all fields.';
+      formStatus.className = 'error';
+      return;
+    }
+
+    // Validate email format
+    const emailField = contactForm.querySelector('input[name="sender_email"]');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value.trim())) {
+      emailField.style.borderColor = 'crimson';
+      emailField.style.boxShadow = '0 0 0 2px rgba(220,20,60,0.2)';
+      formStatus.textContent = '\u26a0 Please enter a valid email address.';
+      formStatus.className = 'error';
+      return;
+    }
+
+    if (!initEmailJS()) {
       formStatus.textContent = 'Email service not configured yet.';
       formStatus.className = 'error';
       return;
@@ -200,12 +235,17 @@ if (contactForm) {
 
     emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm)
       .then(() => {
-        formStatus.textContent = '✓ Message sent!';
+        formStatus.innerHTML = '<span style="font-size:18px;display:inline-block;animation:checkBounce 0.5s ease">✅</span> Message sent! I\'ll get back to you soon.';
         formStatus.className = 'success';
         contactForm.reset();
+        contactForm.querySelectorAll('input, textarea').forEach(f => {
+          f.style.borderColor = '';
+          f.style.boxShadow = '';
+        });
       })
-      .catch(() => {
-        formStatus.textContent = '✗ Failed to send. Try again.';
+      .catch((err) => {
+        console.error('EmailJS error:', err?.text || err?.status || err);
+        formStatus.textContent = '\u2717 Failed: ' + (err?.text || 'Try again.');
         formStatus.className = 'error';
       })
       .finally(() => {
