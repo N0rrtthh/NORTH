@@ -1,295 +1,36 @@
-/**Font**/
 @import url('https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
-/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');*/
-/*@import url('https://db.onlinewebfonts.com/c/50cd2aad9c8f35800bb6beac3ad42f16?family=Azonix'); */
-
-@font-face {font-family: "Azonix";
-  src: url("https://db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.eot"); /* IE9*/
-  src: url("https://db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-  url("https://db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.woff2") format("woff2"), /* chrome firefox */
-  url("https://db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.woff") format("woff"), /* chrome firefox */
-  url("https://db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
-  url("https://db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.svg#Azonix") format("svg"); /* iOS 4.1- */
-}
 
 @font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJbecmNE.woff2) format('woff2');
-  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF;
+  font-family: "Azonix";
+  src: url("https://db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/50cd2aad9c8f35800bb6beac3ad42f16.ttf") format("truetype");
 }
 
-/* latin-ext */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
-  unicode-range: U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* devanagari */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z11lFc-K.woff2) format('woff2');
-  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2) format('woff2');
-  unicode-range: U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* devanagari */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z11lFc-K.woff2) format('woff2');
-  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2) format('woff2');
-  unicode-range: U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* devanagari */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z11lFc-K.woff2) format('woff2');
-  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1JlFc-K.woff2) format('woff2');
-  unicode-range: U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKcg72j00.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKew72j00.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKcw72j00.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKfA72j00.woff2) format('woff2');
-  unicode-range: U+0370-03FF;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKcQ72j00.woff2) format('woff2');
-  unicode-range: U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKfw72.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jvWyNL4U.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jtGyNL4U.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jvGyNL4U.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3js2yNL4U.woff2) format('woff2');
-  unicode-range: U+0370-03FF;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jvmyNL4U.woff2) format('woff2');
-  unicode-range: U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jsGyN.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjvWyNL4U.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjtGyNL4U.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjvGyNL4U.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjs2yNL4U.woff2) format('woff2');
-  unicode-range: U+0370-03FF;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjvmyNL4U.woff2) format('woff2');
-  unicode-range: U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjsGyN.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
-*{
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== GLOBAL KEYFRAMES ===== */
+@keyframes heroSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes expandLine {
+  to { transform: scaleX(1); }
+}
+
+/* ===== NAVBAR ===== */
 .Nav {
   max-width: 1570px;
   padding: 0 40px;
@@ -300,14 +41,16 @@
   position: fixed;
   width: 100%;
   z-index: 999;
-  padding: 40px 0;
+  padding: 30px 0;
   font-family: 'Azonix';
   transition: all 0.3s ease;
 }
 
-.NavBar.Container{
-  padding: 5px 0;
-  background: #131313;
+.NavBar.Container {
+  padding: 8px 0;
+  background: rgba(19, 19, 19, 0.97);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.4);
 }
 
 .NavBar .Nav {
@@ -318,124 +61,183 @@
 
 .NavBar .IconLogo {
   display: inline-block;
-  height: 90px; 
-  width: 200px; 
- }
+  height: 70px;
+  width: 160px;
+}
 
 .NavBar .Logo a {
   color: #fff;
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 400;
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 
-.NavBar .Navbar_Items li { 
-  display: inline-block;
+.NavBar .Navbar_Items {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0;
 }
 
 .NavBar .Navbar_Items li a {
   display: block;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  margin-left: 60px;
+  margin-left: 50px;
+  padding: 6px 0;
+  position: relative;
   transition: color 0.3s ease;
 }
 
-.NavBar .Navbar_Items li a:hover {
-  color: rgb(134, 0, 27);
+.NavBar .Navbar_Items li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: crimson;
+  transition: width 0.3s ease;
 }
 
-.NavBar.Container .Navbar_Items li a:hover{
-  color: blue;
+.NavBar .Navbar_Items li a:hover,
+.NavBar .Navbar_Items li a.active-link {
+  color: crimson;
 }
 
-.button {
+.NavBar .Navbar_Items li a:hover::after,
+.NavBar .Navbar_Items li a.active-link::after {
+  width: 100%;
+}
+
+.hamburger {
   color: #fff;
   font-size: 25px;
   cursor: pointer;
   display: none;
 }
 
-
-/**Homepage**/
+/* ===== HOMEPAGE ===== */
 .Homepage {
-  display: flex;
-  height: 100vh;
+  position: fixed;
+  inset: 0;
   color: #fff;
-  min-height: 300px;
   font-family: 'Ubuntu', sans-serif;
   text-align: center;
-}
-
-.Homepage .Nav {
-  margin: auto auto;
-}
-
-.Homepage .Nav .introText1 {
-  font-family: 'Azonix';
-  font-weight: 600;
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.Homepage .Nav .introText2 {
-  font-size: 75px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.Homepage .Nav .introText3 {
-  font-family: 'Azonix';
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  margin-top: 30px;
-}
-
-.Homepage .Nav .introText4 {
-  font-family: 'Azonix';
-  font-size: 50px;
-  font-weight: 600;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: crimson;
-}
-
-.Homepage .Nav .introText4 big{
-  color: white;
-}
-
-.Homepage .Nav .introText5 {
-  font-family: 'Azonix';
-  font-size: 30px;
-  font-weight: 500;
-}
-
-.Homepage .Nav .introText5 span {
-  color: crimson;
-  font-weight: 500;
+  overflow: hidden;
 }
 
 .BackgroundVideo {
-  filter: brightness(70%);
-  object-fit: fill;
-  height: 100%;
-  width: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  right:0;
-  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(55%) saturate(1.1);
+  z-index: 0;
 }
 
- .Homebutton{
-  margin-left: 33%;
+.HomeOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.3) 0%,
+    rgba(0,0,0,0.1) 40%,
+    rgba(0,0,0,0.5) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.HomeContent {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.HomeContent .introText1 {
+  font-family: 'Azonix';
+  font-size: 28px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.HomeContent .introText2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  margin-bottom: 8px;
+}
+
+.HomeContent .introText3 {
+  font-family: 'Azonix';
+  font-size: 18px;
+  letter-spacing: 6px;
+  opacity: 0.6;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.HomeContent .introText4 {
+  font-family: 'Azonix';
+  font-size: 52px;
+  font-weight: 600;
+  color: crimson;
+  text-shadow: 0 0 30px rgba(220,20,60,0.55), 0 0 60px rgba(220,20,60,0.2);
+  letter-spacing: 6px;
+  margin-bottom: 16px;
+}
+
+.HomeContent .introText5 {
+  font-family: 'Azonix';
+  font-size: 28px;
+  letter-spacing: 3px;
+  margin-bottom: 32px;
+}
+
+.HomeContent .introText5 span {
+  color: crimson;
+}
+
+#typewriter {
+  color: crimson;
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(220,20,60,0.5);
+}
+
+.cursor {
+  color: crimson;
+  font-weight: 200;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+
+.Homebutton {
   display: flex;
   align-items: center;
-  }
- .Homebutton button{
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.Homebutton button {
   color: #fff;
   display: block;
   width: 200px;
@@ -447,309 +249,372 @@
   cursor: pointer;
   flex-wrap: nowrap;
   background-color: crimson;
-  border: 2px solid rgb(255, 255, 255);
-  transition: all 0.3s ease;
+  border: 2px solid rgba(255,255,255,0.6);
+  transition: all 0.35s ease;
   font-family: 'Azonix';
-  }
-  
- .Homebutton button:hover{
-  color: rgb(0, 0, 0);
-  background: none;
-  }
-
-/**About**/
-.AboutPage {
- background-color: crimson;
- height: 100%;
- margin: auto;
- width: 100%;
- padding: 20px 0;
-}
-
-.AboutPage .about{
-margin: 6% 0px;
-text-align: center;
-}
-
-.AboutPage .about .Title h2 {
-  font-family: 'Azonix';
-  font-size: 49px;
-  color: aliceblue;
-}
-
-.AboutPage .about .Background {
-  background-color: #fff;
-  margin: 0 5%;
-  border-radius: 40px;
-}
-
-.AboutPage .about .TitleUnder {
-  border: 7px solid crimson;
-  font-family: 'Azonix';
-  padding-top: 7px;
-  font-size: 20px;
-  color: rgb(0, 0, 0);
-}
-
-.AboutPage .about .TitleUnder span {
-  font-family: 'Azonix';
-  font-size: 30px;
-  color: crimson;
-}
-
-.AboutPage .about .Portrait {
-  margin: 13px;
-  height: 700px;
-  width: auto;
-  background-color: rgb(0, 0, 0);
-  border: 10px solid crimson;
-}
-
-.AboutPage .about .Name {
-  font-family: 'Ubuntu', sans-serif;
-  color: #131313;
-  font-size: 45px;
-  margin: 0 80px;
-}
-
-.AboutPage .about .ParagMe {
-  text-indent: 100px;
-  margin: 90px 170px;
-  font-family:'Times New Roman', Times, serif;
-  font-size: 40px;
-  text-align: justify;
-}
-
-.AboutPage .about .Skills h2 {
-  font-family: 'Azonix';
-  font-size: 49px;
-  color: aliceblue;
-}
-
-.AboutPage .about .Background2 {
-  background-color: #fff;
-  margin: 0 10%;
-  border-radius: 40px;
-}
-
-.AboutPage .about .SkillsUnder {
-  border: 7px solid crimson;
-  font-family: 'Azonix';
-  padding-top: 10px;
-  font-size: 20px;
-  color: rgb(0, 0, 0);
-}
-
-.AboutPage .about .SkillsUnder span {
-  font-family: 'Azonix';
-  font-size: 30px;
-  color: crimson;
-}
-
-.AboutPage .about .Myskills {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 30px;
-  padding: 20px 20%;
-}
-
-.AboutPage .about .ApplicationsUnder {
-  border: 7px solid crimson;
-  font-family: 'Azonix';
-  padding-top: 7px;
-  font-size: 20px;
-  list-style: none;
-}
-
-.AboutPage .about .ApplicationsUnder span {
-  font-family: 'Azonix';
-  font-size: 30px;
-  color: crimson;
-}
-
-.btn ul{
-  list-style: none;
-  margin: 9px;
-  font-family: 'Azonix';
-}
-
-.btn ul a{ 
+  letter-spacing: 1px;
+  box-shadow: 0 0 25px rgba(220,20,60,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
   position: relative;
-  color: #f5f5f5;
-  height: 70px;
-  width: 220px;
-  display: block;
-  text-align: center;
-  border-radius: 10px;
-  text-decoration: none;
-  display: inline-block; 
-  background-image: linear-gradient(115deg,#eb2727,#ff7c24,#f73636,#ffa256,#fa8322);
+  overflow: hidden;
 }
 
-.btn a:hover{
-  animation: rotate 0.9s linear infinite;
-  color: #ff0a0a;
-}
-
-@keyframes rotate {
-  100%{
-    filter: hue-rotate(-360deg)
-  }
-}
-.btn a span{
-  height: 88%;
-  width: 96%;
-  background: #111;
-  display: block;
+.Homebutton button::before {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 6px;
-  line-height: 62px;
-  font-size: 10px;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transition: left 0.5s ease;
 }
 
-.AboutPage .about .Experience h2 {
-  font-family: 'Azonix';
-  font-size: 49px;
-  color: aliceblue;
-  padding: 60px 0 0 0;
+.Homebutton button:hover::before {
+  left: 100%;
 }
 
-.AboutPage .about .Background3 {
-  background-color: #fff;
-  margin: 0 10%;
-  border-radius: 40px;
-}
-
-.AboutPage .about .ExperienceUnder {
-  border: 7px solid crimson;
-  font-family: 'Azonix';
-  padding-top: 10px;
-  font-size: 20px;
-  color: rgb(0, 0, 0);
-}
-
-.AboutPage .about .ExperienceUnder span {
-  font-family: 'Azonix';
-  font-size: 30px;
+.Homebutton button:hover {
   color: crimson;
+  background: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 35px rgba(220,20,60,0.3), 0 8px 25px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
 }
 
-.AboutPage .about .MyExperience {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 30px;
-  padding: 20px 20%;
+
+
+/* ===== ABOUT ===== */
+.AboutPage {
+  background-color: #0e0e0e;
+  width: 100%;
+  padding: 120px 0 80px;
+}
+
+.AboutPage .about {
+  text-align: center;
+}
+
+.AboutPage .about .Title h2,
+.AboutPage .about .Skills h2,
+.AboutPage .about .Experience h2,
+.AboutPage .about .Education h2 {
+  font-family: 'Azonix';
+  font-size: 42px;
+  color: #f0f0f0;
+  padding: 60px 0 20px;
+  letter-spacing: 3px;
+  position: relative;
   display: inline-block;
 }
 
-.AboutPage .about .Education h2 {
-  font-family: 'Azonix';
-  font-size: 49px;
-  color: aliceblue;
-  padding: 60px 0 0 0;
+/* Animated underline on section titles */
+.AboutPage .about .Title h2::after,
+.AboutPage .about .Skills h2::after,
+.AboutPage .about .Experience h2::after,
+.AboutPage .about .Education h2::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, crimson, transparent);
+  border-radius: 2px;
+  transition: width 1s ease 0.3s;
 }
 
+.AboutPage .about .Title.revealed h2::after,
+.AboutPage .about .Skills.revealed h2::after,
+.AboutPage .about .Experience.revealed h2::after,
+.AboutPage .about .Education.revealed h2::after {
+  width: 80%;
+}
+
+.AboutPage .about .Background,
+.AboutPage .about .Background2,
+.AboutPage .about .Background3,
 .AboutPage .about .Background4 {
-  background-color: #fff;
-  margin: 0 16%;
-  border-radius: 60px;
+  background-color: #161616;
+  margin: 0 6%;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.07);
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
 }
 
+.AboutPage .about .TitleUnder,
+.AboutPage .about .SkillsUnder,
+.AboutPage .about .ApplicationsUnder,
+.AboutPage .about .ExperienceUnder,
 .AboutPage .about .EducationUnder {
-  border: 7px solid crimson;
+  border-bottom: 2px solid rgba(220,20,60,0.5);
   font-family: 'Azonix';
-  padding-top: 10px;
-  font-size: 20px;
-  color: rgb(0, 0, 0);
+  padding: 20px 0;
+  font-size: 16px;
+  color: #999;
+  background: rgba(220,20,60,0.05);
+  letter-spacing: 2px;
 }
 
+.AboutPage .about .TitleUnder span,
+.AboutPage .about .SkillsUnder span,
+.AboutPage .about .ApplicationsUnder span,
+.AboutPage .about .ExperienceUnder span,
 .AboutPage .about .EducationUnder span {
-  font-family: 'Azonix';
-  font-size: 30px;
+  font-size: 22px;
   color: crimson;
 }
 
+.AboutPage .about .Myskills li,
+.AboutPage .about .MyExperience li,
+.AboutPage .about .MyEducation li {
+  padding: 6px 0 6px 20px;
+  position: relative;
+  border-left: 2px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.AboutPage .about .Myskills li::before,
+.AboutPage .about .MyExperience li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: crimson;
+  transition: transform 0.3s ease;
+}
+
+.AboutPage .about .Myskills li:hover,
+.AboutPage .about .MyExperience li:hover {
+  color: #fff;
+  border-left-color: crimson;
+  transform: translateX(6px);
+}
+
+.AboutPage .about .Myskills li:hover::before,
+.AboutPage .about .MyExperience li:hover::before {
+  transform: translateX(3px);
+}
+
+.AboutPage .about .MyEducation li {
+  padding: 10px 0 10px 20px;
+  border-left: 2px solid rgba(220,20,60,0.2);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.AboutPage .about .MyEducation li:hover {
+  border-left-color: crimson;
+  transform: translateX(6px);
+}
+
+.AboutPage .about .Portrait {
+  margin: 30px auto;
+  display: block;
+  height: 500px;
+  width: auto;
+  max-width: 90%;
+  border: 4px solid crimson;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 0 0 0 rgba(220,20,60,0.4);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.AboutPage .about .Portrait:hover {
+  box-shadow: 0 0 30px 8px rgba(220,20,60,0.35), 0 8px 40px rgba(0,0,0,0.5);
+  transform: scale(1.02);
+}
+
+.AboutPage .about .Name {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 12px 40px 0;
+  letter-spacing: 1px;
+}
+
+.AboutPage .about .ParagMe {
+  text-indent: 50px;
+  margin: 36px 8%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  text-align: justify;
+  color: #b0b0b0;
+  line-height: 1.9;
+}
+
+.AboutPage .about .Myskills,
+.AboutPage .about .MyExperience,
 .AboutPage .about .MyEducation {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 30px;
-  padding: 20px 20%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  padding: 28px 8%;
+  color: #b0b0b0;
+  text-align: left;
+  line-height: 2.1;
 }
 
-/**Services**/
+.AboutPage .about .MyExperience {
+  display: block;
+}
+
+.AboutPage .about .MyEducation h5 {
+  color: crimson;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 2px;
+  letter-spacing: 1px;
+}
+
+/* App buttons */
+.btn ul {
+  list-style: none;
+  padding: 20px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn ul a {
+  position: relative;
+  color: #f5f5f5;
+  height: 56px;
+  width: 200px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  text-decoration: none;
+  background-image: linear-gradient(115deg, #eb2727, #ff7c24, #f73636, #ffa256, #fa8322);
+  font-family: 'Azonix';
+  font-size: 11px;
+  transition: filter 0.3s ease;
+}
+
+.btn ul a:hover {
+  filter: hue-rotate(-60deg) brightness(1.1);
+}
+
+.btn a span {
+  height: 88%;
+  width: 96%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+/* ===== SERVICES ===== */
 .serve {
-background-color: crimson;
+  background: #0d0d0d;
+  padding-bottom: 80px;
 }
 
-.Titleserve{
-  font-size: 49px;
+.Titleserve {
+  font-size: 42px;
   font-family: 'Azonix';
   text-align: center;
-  padding: 120px 0 0 0;
-  color: #f2f2f2;
+  padding: 130px 0 0;
+  color: #f0f0f0;
+  letter-spacing: 4px;
+  position: relative;
 }
 
-.Offers{
-  color: #f2f2f2;
-  margin: 40px 0;
- text-align: center;
- font-family: 'Ubuntu';
- font-size: 20px;
+.Titleserve::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: crimson;
+  margin: 14px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 12px rgba(220,20,60,0.6);
+  animation: expandLine 1s 0.5s ease forwards;
+  transform-origin: center;
+  transform: scaleX(0);
 }
 
-.service .wrapper .box{
-  height: 100px;
-  width: 100%;
+.Offers {
+  color: #888;
+  margin: 24px 5%;
   text-align: center;
-  padding: 10 0;
-  background: #f2f2f2;
-  border-radius: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+  opacity: 0;
+  animation: heroSlideUp 0.8s ease forwards;
 }
-.service .wrapper{
+
+.Offers:nth-of-type(1) { animation-delay: 0.3s; }
+.Offers:nth-of-type(2) { animation-delay: 0.1s; }
+.Offers:nth-of-type(3) { animation-delay: 0.1s; }
+.Offers:nth-of-type(4) { animation-delay: 0.1s; }
+
+.service .wrapper {
   display: grid;
-  margin: auto 90px auto;
-  grid-gap: 50px;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
- }
+  margin: 40px 60px;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
 
 .service .wrapper .box {
   font-family: 'Azonix';
-  width: 350px;
-  margin: 0 auto;
   position: relative;
   perspective: 1000px;
   height: 220px;
-  padding-top: 50px;
-  text-align: center;
- }
-.service.wrapper .box .front-face {
-  background: #fff;
-  height: 35%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.box .front-face {
+  background: #1a1a1a;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.07);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   transition: all 0.5s ease;
 }
+
+.box:hover .front-face {
+  box-shadow: 0 0 30px rgba(155,63,191,0.3), 0 0 60px rgba(58,91,217,0.15);
+}
+
 .box .front-face .icon {
-  height: 80px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .box .front-face .icon i {
-  font-size: 65px;
+  font-size: 55px;
 }
+
 .box .front-face span,
 .box .back-face span {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
+
 .box .front-face .icon i,
 .box .front-face span {
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  background: linear-gradient(-135deg, #e05ce0, #5b7cf7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
- }
+}
 
 .box .back-face {
   position: absolute;
@@ -758,22 +623,28 @@ background-color: crimson;
   z-index: 1;
   height: 220px;
   width: 100%;
-  padding: 30px;
+  padding: 24px;
   color: #fff;
   opacity: 0;
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  background: linear-gradient(-135deg, #9b3fbf, #3a5bd9);
   transform: translateY(110px) rotateX(-90deg);
-  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
   transition: all 0.5s ease;
   border-radius: 20px;
- }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .box .back-face p {
   margin-top: 10px;
   text-align: center;
   font-family: 'Ubuntu';
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .box:hover .back-face {
@@ -786,75 +657,104 @@ background-color: crimson;
   transform: translateY(-110px) rotateX(90deg);
 }
 
-.serve .sheesh{
-margin: 0 10px;
-width: 98.9%;
-object-fit:fill;
+.serve .sheesh {
+  display: block;
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-/**Portfolio**/
-.Portfolio{
-  padding: 100px 10px;
-  background-color: crimson;
-  height: 100%;
+/* ===== PORTFOLIO ===== */
+.Portfolio {
+  padding: 120px 10px 60px;
+  background-color: #0d0d0d;
+  min-height: 100vh;
 }
 
 .Gallery {
-    font-size: 49px;
-    font-family: 'Azonix';
-    text-align: center;
-    padding: 120px 0 0 0;
-    color: #f2f2f2; 
+  font-size: 42px;
+  font-family: 'Azonix';
+  text-align: center;
+  color: #f0f0f0;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  animation: heroSlideUp 0.8s 0.1s ease both;
 }
 
-.linetag{
-  margin: 20px 0 0 0;
-  font-size: 20px;
-  font-family: 'Ubuntu';
-
+.linetag {
+  margin: 10px 0 0;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  color: #666;
+  letter-spacing: 1px;
 }
 
-::selection{
+.menu-close {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(220,20,60,0.15);
+  border: 1px solid rgba(220,20,60,0.4);
   color: #fff;
-  background: #007bff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
 }
 
-.boxes{
+.menu-close:hover {
+  background: crimson;
+  transform: scale(1.1);
+}
+
+::selection {
+  color: #fff;
+  background: crimson;
+}
+
+.boxes {
   margin: 30px auto;
-  max-width: 4700px;
+  max-width: 100%;
 }
 
-.boxes nav{
+.boxes nav {
   display: flex;
   justify-content: center;
 }
 
-.boxes .items{
+.boxes .items {
   display: flex;
-  max-width: 720px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 900px;
   width: 100%;
-  justify-content: center;
 }
 
-.items span{
-  padding: 7px 25px;
-  font-size: 18px;
+.items span {
+  padding: 7px 22px;
+  font-size: 15px;
   font-weight: 500;
   cursor: pointer;
-  color: #ffffff;
+  color: #ccc;
   border-radius: 50px;
-  border: 2px solid #030303;
+  border: 1px solid rgba(255,255,255,0.2);
   transition: all 0.3s ease;
-  margin: 0 4px;
+  font-family: 'Azonix';
 }
 
 .items span.active,
-.items span:hover{
+.items span:hover {
   color: #fff;
-  background: #ffbb55;
+  background: crimson;
+  border-color: crimson;
 }
 
-.gallery{
+.gallery {
   display: flex;
   flex-wrap: wrap;
   margin-top: 30px;
@@ -862,32 +762,25 @@ object-fit:fill;
 
 .gallery .image {
   width: calc(100% / 4);
-  padding: 7px;
+  padding: 6px;
 }
 
 .gallery .image span {
   display: flex;
   width: 100%;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 .gallery .image video {
   width: 100%;
   vertical-align: middle;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
 }
 
 .gallery .image:hover video {
-  transform: scale(1.1);
-}
-
-.gallery .image img {
-  width: 100%;
-  vertical-align: middle;
-  transition: all 0.3s ease;
-}
-.gallery .image:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .gallery .image.hide {
@@ -899,12 +792,8 @@ object-fit:fill;
 }
 
 @keyframes animate {
-  0%{
-    transform: scale(0.5);
-  }
-  100%{
-    transform: scale(1);
-  }
+  0% { transform: scale(0.5); }
+  100% { transform: scale(1); }
 }
 
 .preview-box {
@@ -912,15 +801,15 @@ object-fit:fill;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
-  background: #fff;
+  background: #1a1a1a;
   max-width: 1000px;
-  width: 100%;
-  z-index: 5;
+  width: 95%;
+  z-index: 1100;
   opacity: 0;
   pointer-events: none;
-  border-radius: 3px;
-  padding: 0 5px 5px 5px;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  padding: 0 5px 5px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
 }
 
 .preview-box.show {
@@ -931,27 +820,104 @@ object-fit:fill;
 }
 
 .preview-box .details {
-  padding: 13px 15px 13px 10px;
+  padding: 10px 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  flex-wrap: wrap;
 }
 
 .details .title {
   display: flex;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
+  color: #ccc;
+  font-family: 'Ubuntu';
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .details .title p {
-  font-weight: 500;
+  font-weight: 600;
   margin-left: 5px;
+  color: #fff;
+}
+
+.preview-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.progress-wrap {
+  flex: 1;
+  min-width: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.progress-track {
+  width: 100%;
+  height: 4px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 4px;
+  width: 0%;
+  background: crimson;
+  border-radius: 4px;
+  transition: width 0.25s linear;
+}
+
+.time-label {
+  font-size: 11px;
+  color: #888;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.restart-btn {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #ccc;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.restart-btn:hover {
+  background: rgba(220,20,60,0.2);
+  color: #fff;
+  border-color: crimson;
 }
 
 .details .icon {
-  color: #007bff;
-  font-style: 22px;
+  color: crimson;
+  font-size: 20px;
   cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.details .icon:hover {
+  transform: scale(1.2);
 }
 
 .preview-box .image-box {
@@ -961,7 +927,7 @@ object-fit:fill;
 
 .image-box video {
   width: 100%;
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 12px 12px;
 }
 
 .shadow {
@@ -970,978 +936,565 @@ object-fit:fill;
   top: 0;
   height: 100%;
   width: 100%;
-  z-index: 2;
+  z-index: 1099;
   display: none;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.7);
 }
+
 .shadow.show {
   display: block;
 }
 
 .image h2 {
-  font-size: 32px;
+  font-size: 16px;
   text-align: center;
   font-family: 'Azonix';
-  color: #f2f2f2;
+  color: #ccc;
+  padding: 6px 0 4px;
+  letter-spacing: 1px;
 }
 
-/**Contacts**/
-.Contacts{
+/* ===== CONTACT ===== */
+.Contacts {
   width: 100%;
-  padding: 170px 70px;
-  height: 100%;
-  background: crimson;
+  padding: 130px 5% 80px;
+  background: #0e0e0e;
 }
 
-.titles{
+.titles {
   position: relative;
   text-align: center;
-  font-size: 49px;
+  font-size: 42px;
   font-weight: 500;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
   padding-bottom: 20px;
   font-family: 'Azonix', sans-serif;
-  color: #f2f2f2;
+  color: #f0f0f0;
+  letter-spacing: 3px;
+  opacity: 0;
+  animation: heroSlideUp 0.8s 0.2s ease forwards;
 }
-.titles::before{
+
+.titles::before {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 50%;
-  width: 400px;
-  height: 3px;
-  background: rgb(255, 255, 255);
+  width: 260px;
+  height: 1px;
+  background: rgba(220,20,60,0.6);
   transform: translateX(-50%);
 }
-.titles::after{
+
+.titles::after {
   position: absolute;
-  bottom: -8px;
+  bottom: -10px;
   left: 50%;
-  font-size: 20px;
-  color: rgb(255, 255, 255);
-  padding: 0 20px;
-  background: crimson;
+  font-size: 12px;
+  color: #666;
+  padding: 0 16px;
+  background: #0e0e0e;
   transform: translateX(-50%);
   content: "get in touch";
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
-.left p{
-  color: #f2f2f2;
-  font-size: 20px;
-  margin-top: 15px;
-  font-family: 'Ubuntu';
-  text-align: justify;
-}
-
-.left .text {
-  color: #ffffff;
-  font-size: 30px;
-  font-family: 'Ubuntu';
-  text-align: center;
-}
-
-.Column{
-  width: calc(50% - 3px);
-  margin: 0 25%;
-}
-
-.left .row{
-  background: linear-gradient(-170deg, #c850c0, #4158d0);
-  padding: 0 20px;
-  border-radius: 20px;
-}
-
-.icons{
-  margin: 10px 0;
-}
-
-.row{
+.Contact-content {
   display: flex;
-  height: 80px;
-  align-items: center;
-  margin: 50px 0;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: flex-start;
 }
 
-.info{
-  margin-left: 30px;
-  color: rgb(2, 0, 87);
+.Column {
+  flex: 1;
 }
 
-.info .head{
-  font-size: 35px;
-  text-align: left;
-  font-family: 'Ubuntu';
-  font-weight: 700;
-}
-
-.info .sub-title{
-  color: white;
-  font-size: 30px;
-  text-align: left;
-  font-family: 'Ubuntu';
-  font-weight: 800;
-}
-
-.row i{
-  font-size: 40px;
-  color: rgb(255, 255, 255);
-}
-
+.left .text,
 .right .text {
-  color: #f2f2f2;
-  font-size: 30px;
-  font-weight: 800;
-  font-family: 'Ubuntu';
+  color: #fff;
+  font-size: 22px;
+  font-family: 'Azonix';
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 
-.right form .fields{
+.left p {
+  color: #888;
+  font-size: 15px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.icons {
+  margin: 10px 0;
   display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  margin: 0;
+  height: auto;
+  transition: border-color 0.3s ease, transform 0.2s ease, background 0.3s ease;
+}
+
+.row:hover {
+  border-color: rgba(220,20,60,0.4);
+  background: rgba(220,20,60,0.05);
+  transform: translateX(4px);
+}
+
+.row i {
+  font-size: 20px;
+  color: crimson;
+  min-width: 32px;
+  text-align: center;
+}
+
+.info {
+  margin-left: 16px;
+}
+
+.info .head {
+  font-size: 11px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  color: #666;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.info .sub-title {
+  color: #e0e0e0;
+  font-size: 15px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.info .sub-title a,
+a.sub-title {
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+.info .sub-title a:hover,
+a.sub-title:hover {
+  color: crimson;
+}
+
+/* Contact form */
+.right form .fields {
+  display: flex;
+  gap: 12px;
 }
 
 .right form .field,
-.right form .fields .field{
-  height: 45px;
+.right form .fields .field {
+  height: 48px;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
-.right form .textarea{
-  height: 80px;
+.right form .textarea {
+  height: 120px;
   width: 100%;
-}
-
-.right form .name{
-  margin-right: 10px;
+  margin-bottom: 14px;
 }
 
 .right form .field input,
-.right form .textarea textarea{
+.right form .textarea textarea {
   height: 100%;
   width: 100%;
-  border: 1px solid lightgrey;
-  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
   outline: none;
-  padding: 0 15px;
-  font-size: 17px;
+  padding: 0 16px;
+  font-size: 15px;
   font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+
+.right form .field input::placeholder,
+.right form .textarea textarea::placeholder {
+  color: #666;
 }
 
 .right form .field input:focus,
-.right form .textarea textarea:focus{
-  border-color: #b3b3b3;
-}
-.right form .textarea textarea{
-padding-top: 10px;
-resize: none;
-}
-.right form .button-area{
-display: flex;
-align-items: center;
-}
-.right form .button-area button{
-color: #fff;
-display: block;
-width: 160px;
-height: 45px;
-outline: none;
-font-size: 18px;
-font-weight: 500;
-border-radius: 6px;
-cursor: pointer;
-flex-wrap: nowrap;
-background: linear-gradient(-135deg, #c850c0, #4158d0);
-box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
-border: 2px solid rgb(255, 255, 255);
-transition: all 0.3s ease;
+.right form .textarea textarea:focus {
+  border-color: crimson;
+  background: rgba(220,20,60,0.06);
 }
 
-.right form .button-area button:hover{
-color: rgb(0, 0, 0);
-background: none;
+.right form .textarea textarea {
+  padding-top: 12px;
+  resize: none;
 }
 
-
-@media (max-width: 1283px) {
-  .AboutPage {
-    padding: 50px 0;
-  }
-  
-  
-/**Contact**/
-
-
-.Column{
-  width: calc(60% - 3px);
-  margin: 0 20%;
+.right form .button-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-.left .text {
-  font-size: 30px;
+#form-status {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
 }
 
-.info .head{
-  font-size: 25px;
+#form-status.success { color: #4caf50; }
+#form-status.error   { color: crimson; }
+
+.right form .button-area button {
+  color: #fff;
+  width: 180px;
+  height: 48px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  background: crimson;
+  border: none;
+  transition: all 0.3s ease;
+  font-family: 'Azonix';
+  letter-spacing: 2px;
+  box-shadow: 0 4px 20px rgba(220,20,60,0.3);
 }
 
-.info .sub-title{
-  font-size: 30px;
+.right form .button-area button:hover {
+  background: #e8102a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(220,20,60,0.45);
 }
-.gallery .image{
-  width: calc(100% / 3);
+
+/* ===== SCROLL REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.88);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+/* Stagger delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+
+/* ===== FOOTER ===== */
+footer {
+  background: #080808;
+  padding: 22px;
+  color: crimson;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-top: 1px solid rgba(255,255,255,0.04);
 }
 
-@media (max-width: 1028px) {
-  .Column{
-    width: calc(70% - 3px);
-    margin: 0 15%;
-   }
+footer span a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
 
-  }
-  .boxes nav .items{
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  nav .items span{
-    margin: 5px;
-  }
-  .gallery .image{
-    width: 100%;
-  }  
-  .gallery .image{
-    width: calc(100% / 3);
-  }
+footer span a:hover {
+  color: #ff6b6b;
+}
 
+/* ===== RESPONSIVE ===== */
+
+/* Large tablet */
+@media (max-width: 1100px) {
+  .gallery .image { width: calc(100% / 3); }
+  .service .wrapper { margin: 40px 30px; }
+  .AboutPage .about .Background,
+  .AboutPage .about .Background2,
+  .AboutPage .about .Background3,
+  .AboutPage .about .Background4 { margin: 0 4%; }
+}
+
+/* Tablet / hamburger breakpoint */
 @media (max-width: 1000px) {
-  .button {
-    display: block;
+  /* Navbar */
+  .hamburger { display: block; }
+  .hamburger i.active::before { content: "\f00d"; }
+
+  .NavBar .Navbar_Items {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(13,13,13,0.98);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding-top: 120px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    flex-direction: column;
+    gap: 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1050;
+    overflow-y: auto;
+  }
+  .NavBar .Navbar_Items.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .NavBar .Navbar_Items li { display: block; }
+  .NavBar .Navbar_Items li a {
+    display: inline-block;
+    margin: 14px 0;
+    font-size: 22px;
+  }
+
+  .menu-close {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     z-index: 999;
   }
 
-  .button i.active:before {
-    content: "\f00d";
+  /* Homepage — center the button */
+  .Homebutton {
+    margin-left: 0;
+    justify-content: center;
   }
 
-  .NavBar .Navbar_Items {
-   position: fixed;
-   height: 100vh;
-   width: 100%;
-   left: 0;
-   top: -100%;
-   background: #131313;
-   text-align: center;
-   padding-top: 150px;
-   transition: all 0.3s ease;
+  /* Contact */
+  .Contact-content { flex-direction: column; }
+  .Column { width: 100%; flex: unset; }
+
+  /* Services */
+  .service .wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    margin: 30px 20px;
   }
 
-  .NavBar .Navbar_Items.active {
-    top: 0;
-  }
-
-  .NavBar .Navbar_Items li{
-   display: block;
-  }
-
-  .NavBar .Navbar_Items li a{
-    display: inline-block;
-    margin: 20px 0;
-    font-size: 25px;
-   }
-
-   .boxes {
-    width: 100%;
-    }
-    .single-service {
-    width: 95%;
-    margin-bottom: 30px;
-    }
-    .boxes h2 {
-    font-size: 30px;
-    }
-    
-    .gallery .image{
-      width: calc(100% / 3);
-    }
-
-}
+  /* Portfolio */
+  .gallery .image { width: calc(100% / 3); }
 }
 
-footer{
-  background: #111;
-  padding: 20px 23px;
-  color: #fff;
-  text-align: center;
-  font-family: 'Azonix';
-}
-footer span a{
-  color: crimson;
-  text-decoration: none;
-}
-footer span a:hover{
-  text-decoration: underline;
-}
-
-@media (max-width: 991px) {
-  .Nav {
-    padding: 0 50px;
-  }
-
-}
-
-@media (max-width: 947px) {
-  
- 
-  /**Homepage**/
-  .Homepage .Nav .introText1 {
-    font-size: 27px;
-  }
-  
-  .Homepage .Nav .introText2 {
-    font-size: 70px;
-  }
-  
-  .Homepage .Nav .introText3 {
-    font-size: 20px;
-  }
-
-  .Homepage .Nav .introText4 {
-    font-size: 35px;
-  }
-
-  .Homepage .Nav .introText5 {
-    font-size: 25px;
-  }
-
-  /**About**/
-  .AboutPage {
-    padding: 60px 0;
-    width: 100%
-  }
-
-  .AboutPage .about .Title h2 {
-    font-size: 40px;
-}
-
-.AboutPage .about .TitleUnder {
-  font-size: 30px;
-}
-
-.AboutPage .about .TitleUnder span {
-  font-size: 35px;
-}
-
-.AboutPage .about .Portrait {
-  height:600px;
-  width: 90%;
-}
-
-.AboutPage .about .Name {
-  font-size: 45px;
-}
-
-.AboutPage .about .ParagMe {
-  text-indent: 50px;
-  margin: 30px 40px;
-  font-size: 35px;
-}
-
-.AboutPage .about .Skills h2 {
-  font-size: 45px;
-}
-
-.AboutPage .about .SkillsUnder {
-  font-size: 30px;
-}
-
-.AboutPage .about .SkillsUnder span {
-  font-size: 35px;
-}
-
-.AboutPage .about .Myskills {
-  font-size: 35px;
-}
-
-.AboutPage .about .ApplicationsUnder {
-  font-size: 30px;
-}
-
-.AboutPage .about .ApplicationsUnder span {
-  font-size: 35px;
-}
-
-.btn ul a{ 
-  height: 90px;
-  width: 180px;
-}
-
-.AboutPage .about .Experience h2 {
-  font-size: 45px;
-}
-
-.AboutPage .about .ExperienceUnder {
-  font-size: 30px;
-}
-
-.AboutPage .about .ExperienceUnder span {
-  font-size: 35px;
-}
-
-.AboutPage .about .MyExperience {
-  font-size: 35px;
-}
-
-.AboutPage .about .Education h2 {
-  font-size: 45px;
-}
-
-.AboutPage .about .EducationUnder {
-  font-size: 30px;
-
-}
-
-.AboutPage .about .EducationUnder span {
-  font-size: 30px;
-}
-
-.AboutPage .about .MyEducation {
-  font-size: 35px;
-}
-
-/**Contact**/
-.titles{
-  font-size: 45px;
-}
-
-.titles::before{
-  width: 230px;
-}
-
-.titles::after{
-  bottom: -8px;
-  left: 50%;
-  font-size: 15px;
-  padding: 0 10px;
-}
-
-.left p{
-  font-size: 17px;
-  margin: 15px -5px;
-}
-
-.Column{
-  width: calc(90% - 3px);
-  margin: 0 5%;
-}
-
-.left .text {
-  font-size: 30px;
-}
-
-.info .head{
-  font-size: 25px;
-}
-
-.info .sub-title{
-  font-size: 25px;
-}
-
-.row i{
-  font-size: 25px;
-}
-
-.right .text {
-  font-size: 30px;
-  
-}
-
-
-}
-
+/* Small tablet */
 @media (max-width: 800px) {
-  .gallery .image{
-    width: calc(100% / 2);
-  }
+  /* Homepage */
+  .HomeContent .introText2 { font-size: 52px; }
+  .HomeContent .introText4 { font-size: 38px; }
+  .HomeContent .introText5 { font-size: 22px; }
 
+  /* Portfolio */
+  .gallery .image { width: calc(100% / 2); }
 
-@media (max-width: 700px) {
-  .wrapper{
-    margin: 200px auto;
-  }
+  /* About */
+  .AboutPage .about .Portrait { height: 420px; }
+  .AboutPage .about .Name { font-size: 32px; margin: 10px 20px 0; }
+  .AboutPage .about .ParagMe { margin: 30px 5%; font-size: 17px; }
+  .AboutPage .about .Myskills,
+  .AboutPage .about .MyExperience,
+  .AboutPage .about .MyEducation { font-size: 17px; padding: 24px 6%; }
 
-  .boxes nav .items{
-    max-width: 600px;
+  /* Services */
+  .service .wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    margin: 24px 16px;
+    gap: 20px;
   }
-  nav .items span{
-    padding: 7px 15px;
-  }
- }
-   
+  .Titleserve { font-size: 38px; padding-top: 110px; }
+  .Offers { font-size: 16px; margin: 20px 4%; }
+
+  /* Contact */
+  .Contacts { padding: 110px 4% 60px; }
+  .titles { font-size: 38px; }
+  .titles::before { width: 240px; }
+  .right form .fields { flex-direction: column; gap: 0; }
 }
 
-  @media (max-width: 690px) {
+/* Large phone */
+@media (max-width: 690px) {
+  /* Navbar */
+  .NavBar { padding: 20px 0; }
+  .NavBar .IconLogo { height: 55px; width: 120px; }
+  .NavBar .Logo a { font-size: 26px; }
+  .Nav { padding: 0 16px; }
 
-    .NavBar .IconLogo {
-      height: 82px; 
-      width: 150px; 
-     }
-    
-    .NavBar .Logo a {
-      font-size: 30px;
-    }
-  
-    .Nav {
-      padding: 0 20 px;
-    }
+  /* Homepage */
+  .HomeContent .introText1 { font-size: 16px; letter-spacing: 4px; }
+  .HomeContent .introText2 { font-size: 40px; }
+  .HomeContent .introText3 { font-size: 14px; letter-spacing: 3px; }
+  .HomeContent .introText4 { font-size: 32px; letter-spacing: 3px; }
+  .HomeContent .introText5 { font-size: 20px; letter-spacing: 2px; }
+  .Homebutton { margin-left: 0; justify-content: center; }
+  .Homebutton button { width: 190px; height: 60px; font-size: 16px; }
 
-    /**Homepage**/
-    .Homepage .Nav .introText1 {
-      font-size: 20px;
-    }
-    
-    .Homepage .Nav .introText2 {
-      font-size: 50px;
-    }
-    
-    .Homepage .Nav .introText3 {
-      font-size: 20px;
-    }
+  /* About */
+  .AboutPage { padding: 100px 0 40px; }
+  .AboutPage .about .Title h2,
+  .AboutPage .about .Skills h2,
+  .AboutPage .about .Experience h2,
+  .AboutPage .about .Education h2 { font-size: 34px; padding: 40px 0 16px; }
+  .AboutPage .about .Background,
+  .AboutPage .about .Background2,
+  .AboutPage .about .Background3,
+  .AboutPage .about .Background4 { margin: 0 3%; border-radius: 14px; }
+  .AboutPage .about .TitleUnder,
+  .AboutPage .about .SkillsUnder,
+  .AboutPage .about .ApplicationsUnder,
+  .AboutPage .about .ExperienceUnder,
+  .AboutPage .about .EducationUnder { font-size: 15px; padding: 14px 10px; }
+  .AboutPage .about .TitleUnder span,
+  .AboutPage .about .SkillsUnder span,
+  .AboutPage .about .ApplicationsUnder span,
+  .AboutPage .about .ExperienceUnder span,
+  .AboutPage .about .EducationUnder span { font-size: 20px; }
+  .AboutPage .about .Portrait { height: 340px; }
+  .AboutPage .about .Name { font-size: 26px; }
+  .AboutPage .about .ParagMe { font-size: 15px; text-indent: 30px; margin: 20px 4%; }
+  .AboutPage .about .Myskills,
+  .AboutPage .about .MyExperience,
+  .AboutPage .about .MyEducation { font-size: 15px; padding: 20px 5%; }
+  .btn ul a { width: 160px; height: 50px; font-size: 10px; }
 
-    .Homepage .Nav .introText4 {
-      font-size: 33px;
-    }
+  /* Services */
+  .Titleserve { font-size: 32px; padding-top: 100px; }
+  .service .wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin: 20px 12px;
+    gap: 16px;
+  }
+  .serve .sheesh { width: 100%; margin: 0; border-radius: 0; }
 
-    .Homepage .Nav .introText5 {
-      font-size: 30px;
-    }
+  /* Portfolio */
+  .Portfolio { padding: 100px 8px 40px; }
+  .Gallery { font-size: 30px; }
+  .linetag { font-size: 13px; }
+  .items span { font-size: 12px; padding: 6px 14px; }
+  .image h2 { font-size: 13px; }
 
-    .Homebutton{
-      margin-left: 27%;
-    }
-
-    .Homebutton button{
-      width: 190px;
-      height: 60px;
-      font-size: 18px;
-    }
-
-
-    /**About**/
-    .AboutPage {
-      padding: 70px 0;
-      width: 100%
-    }
-
-    .AboutPage .about .Title h2 {
-      font-size: 35px;
-    }
-
-    .AboutPage .about .TitleUnder {
-    font-size: 20px;
-    }
-  
-    .AboutPage .about .TitleUnder span {
-    font-size: 25px;
-    }
-
-    .AboutPage .about .Portrait {
-    height:400px;
-    width: 90%;
-    }
-
-    .AboutPage .about .Name {
-    font-size: 35px;
-    }
-
-    .AboutPage .about .ParagMe {
-    text-indent: 50px;
-    margin: 30px 40px;
-    font-size: 25px;
-    }
-
-    .AboutPage .about .Skills h2 {
-    font-size: 35px;
-    }
-
-    .AboutPage .about .SkillsUnder {
-    font-size: 20px;
-    }
-
-    .AboutPage .about .SkillsUnder span {
-    font-size: 25px;
-    }
-
-    .AboutPage .about .Myskills {
-    font-size: 25px;
-    }
-
-    .AboutPage .about .ApplicationsUnder {
-    font-size: 20px;
-    }
-
-    .AboutPage .about .ApplicationsUnder span {
-    font-size: 25px;
-    }
-
-    .btn ul a{ 
-    height: 80px;
-    width: 175px;
-    }
-  
-    .AboutPage .about .Experience h2 {
-    font-size: 35px;
-    }
-
-    .AboutPage .about .ExperienceUnder {
-    font-size: 20px;
-    }
-
-    .AboutPage .about .ExperienceUnder span {
-    font-size: 25px;
-    }
-
-    .AboutPage .about .MyExperience {
-    font-size: 25px;
-    }
-
-    .AboutPage .about .Education h2 {
-    font-size: 35px;
-    }
-
-    .AboutPage .about .EducationUnder {
-    font-size: 20px;
-    }
-  
-    .AboutPage .about .EducationUnder span {
-    font-size: 20px;
-    }
-  
-    .AboutPage .about .MyEducation {
-    font-size: 25px;
-    }
-
-      /**Portfolio**/
-  .Gallery {
-    font-size: 37px; /*max 49*/
+  /* Contact */
+  .Contacts { padding: 100px 4% 50px; }
+  .titles { font-size: 32px; }
+  .titles::before { width: 200px; }
+  .titles::after { font-size: 12px; }
+  .left .text, .right .text { font-size: 18px; }
+  .left p { font-size: 14px; }
+  .info .head { font-size: 11px; }
+  .info .sub-title { font-size: 14px; }
+  .row i { font-size: 20px; min-width: 28px; }
+  .row { padding: 12px 14px; }
+  .right form .button-area button { width: 100%; }
 }
 
-.items span{
-  font-size: 14px; /*max 18*/
-  padding: 7px 25px;
-  margin: 0 4px;
+/* Small phone */
+@media (max-width: 480px) {
+  /* Navbar */
+  .NavBar .IconLogo { height: 46px; width: 100px; }
+  .NavBar .Logo a { font-size: 22px; }
 
+  /* Homepage */
+  .HomeContent .introText1 { font-size: 11px; letter-spacing: 3px; }
+  .HomeContent .introText2 { font-size: 30px; letter-spacing: 1px; }
+  .HomeContent .introText3 { font-size: 11px; }
+  .HomeContent .introText4 { font-size: 26px; }
+  .HomeContent .introText5 { font-size: 16px; }
+  .Homebutton button { width: 170px; height: 54px; font-size: 14px; }
+
+  /* About */
+  .AboutPage .about .Portrait { height: 280px; }
+  .AboutPage .about .Name { font-size: 22px; }
+  .AboutPage .about .ParagMe { font-size: 14px; }
+  .AboutPage .about .Myskills,
+  .AboutPage .about .MyExperience,
+  .AboutPage .about .MyEducation { font-size: 14px; }
+  .btn ul a { width: 140px; height: 46px; }
+
+  /* Services */
+  .Titleserve { font-size: 28px; }
+  .Offers { font-size: 14px; }
+  .service .wrapper { grid-template-columns: 1fr 1fr; margin: 16px 8px; gap: 12px; }
+  .box .front-face span, .box .back-face span { font-size: 13px; }
+  .box .front-face .icon i { font-size: 36px; }
+  .box .back-face p { font-size: 12px; }
+
+  /* Portfolio */
+  .gallery .image { width: 100%; }
+  .Gallery { font-size: 26px; }
+  .items span { font-size: 11px; padding: 5px 10px; }
+
+  /* Contact */
+  .titles { font-size: 26px; }
+  .titles::before { width: 160px; }
+  .Contact-content { gap: 24px; }
+  .right form .fields { flex-direction: column; gap: 0; }
+  .right form .field, .right form .fields .field { height: 44px; }
+  .right form .textarea { height: 100px; }
+
+  /* Footer */
+  footer { font-size: 11px; padding: 18px 12px; }
 }
 
-.image h2 {
-  font-size: 27px; /*max 18*/
-}
-
-    /**Contact**/
-    .titles{
-      font-size: 35px;
-    }
-  
-    .titles::before{
-      width: 230px;
-    }
-    
-    .titles::after{
-      bottom: -8px;
-      left: 50%;
-      font-size: 15px;
-      padding: 0 10px;
-    }
-  
-    .left p{
-      font-size: 17px;
-      margin: 15px -5px;
-    }
-  
-    .Column{
-      width: calc(90% - 3px);
-      margin: 0 5%;
-    }
-    
-    .left .text {
-      font-size: 30px;
-    }
-    
-    .info .head{
-      font-size: 25px;
-    }
-    
-    .info .sub-title{
-      font-size: 25px;
-    }
-    
-    .row i{
-      font-size: 25px;
-    }
-    
-    .right .text {
-      font-size: 30px;
-    }
-  
-}
-
-@media (max-width: 1700px) {
-  .boxes nav .items{
-    justify-content: center;
-  }
-}
-
-@media (max-width: 946px) {
-  .boxes nav .items{
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  nav .items span{
-    margin: 5px;
-  }
-  .gallery .image{
-    width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .boxes nav .items{
-    justify-content: center;
-  }
-  nav .items span{
-    margin: 5px;
-  }
-  .gallery .image{
-    width: 100%;
-  }
-}
-
-@media (max-width: 543px) {
-.Column{
-  width: calc(95% - 3px);
-  margin: 0 15%;
- }
-
- .info .sub-title{
-  font-size: 24px;
-}
-
-}
-
-  @media (max-width: 500px) {
-    .NavBar .IconLogo {
-      height: 70px; 
-      width: 120px; 
-     }
-
-    .NavBar .Logo a {
-      font-size: 30px;
-    }
-
-    /**HomePage**/
-    .Homepage .Nav .introText1 {
-      font-size: 15px;
-    }
-    
-    .Homepage .Nav .introText2 {
-      font-size: 30px;
-    }
-    
-    .Homepage .Nav .introText3 {
-      font-size: 15px;
-    }
-
-    .Homepage .Nav .introText4 {
-      font-size: 30px;
-    }
-    
-    .Homepage .Nav .introText5 {
-      font-size: 20px;
-    }
-
-    .Homebutton{
-      margin-left: 12%;
-    }
-
-    .Homebutton button{
-      width: 180px;
-      height: 50px;
-      font-size: 15px;
-    }
-
-   
-    /**About**/
-    .AboutPage {
-      padding: 80px 0;
-      width: 100%
-    }
-
-    .AboutPage .about .Title h2 {
-      font-size: 30px;
-    }
-
-    .AboutPage .about .TitleUnder {
-    font-size: 15px;
-    }
-  
-    .AboutPage .about .TitleUnder span {
-    font-size: 20px;
-    }
-
-    .AboutPage .about .Portrait {
-    height:400px;
-    width: 90%;
-    }
-
-    .AboutPage .about .Name {
-    font-size: 30px;
-    }
-
-    .AboutPage .about .ParagMe {
-    text-indent: 50px;
-    margin: 30px 40px;
-    font-size: 20px;
-    }
-
-    .AboutPage .about .Skills h2 {
-    font-size: 30px;
-    }
-
-    .AboutPage .about .SkillsUnder {
-    font-size: 15px;
-    }
-
-    .AboutPage .about .SkillsUnder span {
-    font-size: 20px;
-    }
-
-    .AboutPage .about .Myskills {
-    font-size: 20px;
-    }
-
-    .AboutPage .about .ApplicationsUnder {
-    font-size: 15px;
-    }
-
-    .AboutPage .about .ApplicationsUnder span {
-    font-size: 20px;
-    }
-
-    .btn ul a{ 
-    height: 70px;
-    width: 170px;
-    }
-  
-    .AboutPage .about .Experience h2 {
-    font-size: 30px;
-    }
-
-    .AboutPage .about .ExperienceUnder {
-    font-size: 15px;
-    }
-
-    .AboutPage .about .ExperienceUnder span {
-    font-size: 20px;
-    }
-
-    .AboutPage .about .MyExperience {
-    font-size: 20px;
-    }
-
-    .AboutPage .about .Education h2 {
-    font-size: 30px;
-    }
-
-    .AboutPage .about .EducationUnder {
-    font-size: 15px;
-  
-    }
-  
-    .AboutPage .about .EducationUnder span {
-    font-size: 20px;
-    }
-  
-    .AboutPage .about .MyEducation {
-    font-size: 20px;
-    }
-
-  /**Services**/
-  .Titleserve{
-    font-size: 49px;
-    text-align: center;
-  }
-  
-  .Offers{
-    color: #f2f2f2;
-    margin: 40px 0;
-   text-align: center;
-   font-family: 'Ubuntu';
-   font-size: 15px;
-  }
-  
-
-
-  /**Portfolio**/
-  .Gallery {
-    font-size: 30px;
-}
-
-.items span{
-  font-size: 10px;
-}
-
-.image h2 {
-  font-size: 22px;
-}
-
-  /**Contact**/
-  .titles{
-    font-size: 30px;
-    margin-bottom: 60px;
-    padding-bottom: 20px;
-  }
-
-  .titles::before{
-    bottom: 0px;
-    left: 50%;
-    width: 210px;
-  }
-  
-  .titles::after{
-    bottom: -8px;
-    left: 50%;
-    font-size: 15px;
-    padding: 0 10px;
-  }
-
-  .left p{
-    font-size: 17px;
-    margin: 15px -25px;
-  }
-
-  .Column{
-    width: calc(90% - 3px);
-    margin: 0 2%;
-  }
-  
-  .left .text {
-    font-size: 20px;
-  }
-  
-  .info .head{
-    font-size: 20px;
-  }
-  
-  .info .sub-title{
-    font-size: 18px;
-  }
-  
-  .row i{
-    font-size: 20px;
-  }
-  
-  .right .text {
-    font-size: 20px;
-  }
-
+/* Very small phone */
+@media (max-width: 360px) {
+  .HomeContent .introText2 { font-size: 26px; }
+  .HomeContent .introText4 { font-size: 22px; }
+  .HomeContent .introText5 { font-size: 14px; }
+  .Homebutton button { width: 150px; height: 48px; font-size: 13px; }
+  .service .wrapper { grid-template-columns: 1fr; }
+  .gallery .image { width: 100%; }
+  .NavBar .Logo a { font-size: 20px; }
+  .NavBar .IconLogo { height: 40px; width: 88px; }
 }

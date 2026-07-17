@@ -1,73 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N O R T H</title>
+  <link rel="icon" href="Images/Logo1.ico" type="image/x-icon">
+  <link rel="stylesheet" href="main.css">
+  <style>
+    html, body { overflow: hidden; height: 100%; }
 
-    <head>
-        
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-        <title>N O R T H</title>
-        <link rel="Title Icon" href="Images/Logo 1.png" type="image/png">
-        <link rel="stylesheet" href="main.css">
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    /* ===== LOADER ===== */
+    #loader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #0a0a0a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+      transition: opacity 0.7s ease, visibility 0.7s ease;
+    }
+    #loader.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
 
-    </head>
-   
-    <body>
+    /* Spinning ring */
+    .loader-ring {
+      position: relative;
+      width: 160px;
+      height: 160px;
+      flex-shrink: 0;
+    }
+    /* Outer radial halo — perfectly circular */
+    .loader-ring::before {
+      content: '';
+      position: absolute;
+      inset: -24px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(220,20,60,0.28) 0%, rgba(220,20,60,0.1) 50%, transparent 72%);
+      animation: halo-pulse 2.4s ease-in-out infinite;
+      pointer-events: none;
+    }
+    /* Circular glow ring — uses border-radius 50% so box-shadow is round */
+    .loader-ring::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      box-shadow:
+        0 0 18px 4px rgba(220,20,60,0.5),
+        0 0 40px 10px rgba(220,20,60,0.25),
+        0 0 70px 18px rgba(220,20,60,0.1);
+      animation: halo-pulse 2.4s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes halo-pulse {
+      0%, 100% { opacity: 0.65; transform: scale(1); }
+      50%       { opacity: 1;    transform: scale(1.05); }
+    }
+    .loader-ring svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      animation: spin 2.4s linear infinite;
+      overflow: visible;
+    }
+    .loader-ring svg circle {
+      fill: none;
+      stroke: url(#ringGrad);
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-dasharray: 240 60;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
 
-     <!--Home Page Navigation Bar-->
-     <nav class="NavBar">
-        <div class="Nav">
+    /* Logo inside ring */
+    .loader-logo {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .loader-logo img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      animation: pulse 2s ease-in-out infinite;
+      filter: drop-shadow(0 0 8px rgba(220,20,60,0.8)) drop-shadow(0 0 20px rgba(220,20,60,0.5));
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1);    filter: drop-shadow(0 0 6px rgba(220,20,60,0.6)) drop-shadow(0 0 14px rgba(220,20,60,0.3)); }
+      50%       { transform: scale(1.07); filter: drop-shadow(0 0 14px rgba(220,20,60,1))   drop-shadow(0 0 28px rgba(220,20,60,0.6)); }
+    }
 
-            <div class="Logo">
-                <a href="#"><img class="IconLogo" src="Images/Logo2.png" alt="Logo pic">NORTH</a>
-            </div>
+    /* Text + progress */
+    .loader-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      width: 220px;
+    }
+    .loader-name {
+      font-family: 'Azonix', sans-serif;
+      font-size: 22px;
+      letter-spacing: 8px;
+      color: #fff;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.3s ease forwards;
+    }
+    .loader-sub {
+      font-family: 'Poppins', sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: #555;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.55s ease forwards;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
 
-            <ul class="Navbar_Items">
-                <li><a href="#" class="button"><b>Home</b></a></li>
-                <li><a href="About.html" class="button"><b>About</b></a></li>
-                <li><a href="Services.html" class="button"><b>Services</b></a></li>
-                <li><a href="Portfolio.html" class="button"><b>Portfolio</b></a></li>
-                <li><a href="Contact.html" class="button"><b>Contact</b></a></li>
-            </ul>
-           
-            <div class="button">
-                <i class="fa fa-bars"></i>
-            </div>
-        
-        </div>            
-            
-    </nav>
+    /* Progress bar */
+    .loader-track {
+      width: 100%;
+      height: 2px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 2px;
+      overflow: hidden;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.7s ease forwards;
+    }
+    .loader-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, crimson, #ff6b6b);
+      border-radius: 2px;
+      box-shadow: 0 0 8px rgba(220,20,60,0.7);
+      transition: width 0.25s ease;
+    }
+    .loader-pct {
+      font-family: 'Azonix', sans-serif;
+      font-size: 11px;
+      color: crimson;
+      letter-spacing: 2px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.7s ease forwards;
+    }
 
-    <section class="Homepage" id="home">
-        <div class="Nav">
-            
-          <div class="Content">
-              <div><video class="BackgroundVideo" autoplay loop muted>
-                    <source src="Images/VideoBackground.mp4" type="video/mp4"/>
-                  </video> 
+    /* Particles */
+    .loader-particles {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .loader-particles span {
+      position: absolute;
+      bottom: -10px;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background: crimson;
+      opacity: 0;
+      animation: rise var(--d) var(--delay) ease-in infinite;
+    }
+    @keyframes rise {
+      0%   { transform: translateY(0)   scale(1);   opacity: 0.7; }
+      100% { transform: translateY(-100vh) scale(0); opacity: 0; }
+    }
+    /* Hero entrance animations */
+    .HomeContent .introText1,
+    .HomeContent .introText2,
+    .HomeContent .introText3,
+    .HomeContent .introText4,
+    .HomeContent .introText5,
+    .HomeContent .Homebutton {
+      opacity: 0;
+      animation: heroSlideUp 0.8s ease forwards;
+    }
+    .HomeContent .introText1 { animation-delay: 0.1s; }
+    .HomeContent .introText2 { animation-delay: 0.25s; }
+    .HomeContent .introText3 { animation-delay: 0.4s; }
+    .HomeContent .introText4 { animation-delay: 0.55s; }
+    .HomeContent .introText5 { animation-delay: 0.7s; }
+    .HomeContent .Homebutton { animation-delay: 0.9s; }
+    @keyframes heroSlideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    /* Crimson text glow pulse on introText4 */
+    .HomeContent .introText4 {
+      animation: heroSlideUp 0.8s 0.55s ease forwards, glowPulse 3s 1.5s ease-in-out infinite;
+    }
+    @keyframes glowPulse {
+      0%, 100% { text-shadow: 0 0 30px rgba(220,20,60,0.55), 0 0 60px rgba(220,20,60,0.2); }
+      50%       { text-shadow: 0 0 50px rgba(220,20,60,0.9), 0 0 100px rgba(220,20,60,0.4); }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
 
-              <div class="introText1">Hi, i am</div>
-              <div class="introText2">Elroni F. Quiñones</div>
-              <div class="introText3">Also known as</div>
-              <div class="introText4">- <big><b>NORTH</b></big> -</div>
-              <div class="introText5">I'M AN <span><b><big>Animator</big></b></span></span></div>
-              <br>
-              <div class="Homebutton">
-                <a href="Portfolio.html" class="folio"><button type="Area">See My Works</button>
-                 
-                </a>
-              </div>
-        </div> 
-        </div>
-    </section>
+  <!-- ===== LOADER ===== -->
+  <div id="loader">
+    <div class="loader-particles" id="loaderParticles"></div>
 
-    <footer>
-        <span>Created By <a href="About.html">Elroni F. Quiñones | NORTH</a> | <span class="far fa-copyright"></span>2022 All rights reserved.</span>
-    </footer>
+    <div class="loader-ring">
+      <svg viewBox="0 0 100 100">
+        <defs>
+          <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%"   stop-color="crimson" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#ff6b6b" stop-opacity="0.2"/>
+          </linearGradient>
+        </defs>
+        <circle cx="50" cy="50" r="46"/>
+      </svg>
+      <div class="loader-logo">
+        <img src="Images/Logo 1.png" alt="NORTH">
+      </div>
+    </div>
 
-     <script src="script.js"></script>
-    </body>
+    <div class="loader-bottom">
+      <div class="loader-name">NORTH</div>
+      <div class="loader-sub">Initializing</div>
+      <div class="loader-track"><div class="loader-fill" id="loaderFill"></div></div>
+      <div class="loader-pct" id="loaderPct">0%</div>
+    </div>
+  </div>
 
+  <nav class="NavBar">
+    <div class="Nav">
+      <div class="Logo">
+        <a href="#"><img class="IconLogo" src="Images/Logo2.png" alt="NORTH Logo">NORTH</a>
+      </div>
+      <ul class="Navbar_Items">
+        <button class="menu-close" aria-label="Close menu">&times;</button>
+        <li><a href="#" class="active-link">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Portfolio.html">Portfolio</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section class="Homepage" id="home">
+    <video class="BackgroundVideo" autoplay loop muted playsinline>
+      <source src="Images/VideoBackground.mp4" type="video/mp4">
+    </video>
+
+    <div class="HomeOverlay"></div>
+
+    <div class="HomeContent">
+      <div class="introText1">Hi, i am</div>
+      <div class="introText2">Elroni F. Quiñones</div>
+      <div class="introText3">Also known as</div>
+      <div class="introText4">— <b>NORTH</b> —</div>
+      <div class="introText5">I'M AN <span id="typewriter"></span><span class="cursor">|</span></div>
+      <div class="Homebutton">
+        <a href="Portfolio.html" class="folio"><button type="button">See My Works</button></a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+
+  <script>
+    (function () {
+      const loader     = document.getElementById('loader');
+      const fill       = document.getElementById('loaderFill');
+      const pct        = document.getElementById('loaderPct');
+      const particles  = document.getElementById('loaderParticles');
+      const video      = document.querySelector('.BackgroundVideo');
+
+      // Spawn floating particles
+      for (let i = 0; i < 28; i++) {
+        const s = document.createElement('span');
+        s.style.cssText = [
+          'left:'  + Math.random() * 100 + '%',
+          '--d:'   + (3 + Math.random() * 5) + 's',
+          '--delay:' + (Math.random() * 4) + 's',
+          'width:' + (1 + Math.random() * 3) + 'px',
+          'height:' + (1 + Math.random() * 3) + 'px',
+          'opacity:' + (0.3 + Math.random() * 0.7)
+        ].join(';');
+        particles.appendChild(s);
+      }
+
+      function setProgress(v) {
+        fill.style.width = v + '%';
+        pct.textContent  = Math.round(v) + '%';
+      }
+
+      function dismiss() {
+        setProgress(100);
+        setTimeout(() => {
+          loader.classList.add('hide');
+          // remove from DOM after transition
+          loader.addEventListener('transitionend', () => loader.remove(), { once: true });
+        }, 400);
+      }
+
+      // Animate progress: fast to ~70 while loading, finish on canplaythrough
+      let prog = 0;
+      const tick = setInterval(() => {
+        if (prog < 70) {
+          prog += (70 - prog) * 0.06;
+          setProgress(prog);
+        } else {
+          clearInterval(tick);
+        }
+      }, 40);
+
+      function onReady() {
+        clearInterval(tick);
+        // Animate from current to 100
+        let p = prog;
+        const finish = setInterval(() => {
+          p += (100 - p) * 0.12;
+          setProgress(p);
+          if (p >= 99) { clearInterval(finish); dismiss(); }
+        }, 30);
+      }
+
+      if (video) {
+        if (video.readyState >= 3) {
+          onReady();
+        } else {
+          video.addEventListener('canplaythrough', onReady, { once: true });
+          // Fallback: dismiss after 4s regardless
+          setTimeout(onReady, 4000);
+        }
+      } else {
+        setTimeout(onReady, 1200);
+      }
+    })();
+  </script>
+</body>
 </html>
