@@ -159,21 +159,26 @@ if (filterItem && filterImgs.length) {
     if (e.key === 'Escape' && previewBox.classList.contains('show')) closePreview();
   });
 
-  // Lazy-load gallery videos — load src when in view, play all, never pause
+  // ===== GALLERY VIDEO MANAGER =====
+  // Only load src when entering view, play when visible, pause when not
+  // This prevents all 24 videos decoding simultaneously
   if ('IntersectionObserver' in window) {
     const vidObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         const video = entry.target;
         if (entry.isIntersecting) {
+          // Load src only when actually scrolled to
           if (video.dataset.src) {
             video.src = video.dataset.src;
             delete video.dataset.src;
           }
           video.play().catch(() => {});
+        } else {
+          // Pause when out of view to free up decode resources
+          video.pause();
         }
-        // no pause on exit — all videos play simultaneously
       });
-    }, { rootMargin: '200px', threshold: 0.05 });
+    }, { rootMargin: '0px', threshold: 0.1 });
 
     filterImgs.forEach(img => {
       const video = img.querySelector('video');
