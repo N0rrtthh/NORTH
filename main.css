@@ -18,6 +18,13 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #0e0e0e;
+}
+
+/* Dark page background behind every section, so a page that is shorter
+   than the screen never shows a white strip below the footer. */
+body {
+  background-color: #0e0e0e;
 }
 
 /* ===== GLOBAL KEYFRAMES ===== */
@@ -984,10 +991,24 @@ html {
 }
 
 /* ===== CONTACT ===== */
+/* The contact page is shorter than tall screens (1440p, 4K, zoomed-out
+   1080p). The section now always fills the window above the footer and
+   centres its content, so the footer sits at the bottom and no white page
+   background shows underneath it. 63px = footer height (padding + text). */
+.Contact {
+  display: flex;
+  min-height: calc(100vh - 63px);
+  min-height: calc(100dvh - 63px);
+  background: #0e0e0e;
+}
+
 .Contacts {
   width: 100%;
   padding: 130px 5% 80px;
   background: #0e0e0e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .titles {
@@ -1032,6 +1053,7 @@ html {
 }
 
 .Contact-content {
+  width: 100%;
   display: flex;
   gap: 40px;
   max-width: 1100px;
